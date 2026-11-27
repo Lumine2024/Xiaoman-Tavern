@@ -1,0 +1,125 @@
+{
+  "save_path": "user://test_companions_20261127.json",
+  "rivals": [
+    "karn",
+    "bella",
+    "marta",
+    "duren",
+    "viola",
+    "olga"
+  ],
+  "ids": [
+    "judge",
+    "pope",
+    "merchant",
+    "banker",
+    "patron"
+  ],
+  "windows": [
+    [
+      1280,
+      800
+    ],
+    [
+      1440,
+      900
+    ]
+  ],
+  "cash": 100000,
+  "initial_cash": 360,
+  "rich_cash": 960,
+  "investment": 600,
+  "merchandise": [
+    "威士忌",
+    "金酒",
+    "伏特加",
+    "柠檬汁",
+    "青柠汁",
+    "糖浆"
+  ],
+  "family": "威士忌",
+  "second_family": "金酒",
+  "purchase_packs": 3,
+  "gifted_ml": 600,
+  "consume_ml": 250,
+  "batch_cases": [
+    {
+      "raw": 20,
+      "expected": 15
+    },
+    {
+      "raw": 21,
+      "expected": 16
+    },
+    {
+      "raw": 37,
+      "expected": 28
+    },
+    {
+      "raw": 3,
+      "expected": 2
+    }
+  ],
+  "bank_cases": [
+    {
+      "cash": 1000,
+      "debt": 0,
+      "valid": 3,
+      "interest": 30
+    },
+    {
+      "cash": 2500,
+      "debt": 0,
+      "valid": 3,
+      "interest": 60
+    },
+    {
+      "cash": 1000,
+      "debt": 800,
+      "valid": 3,
+      "interest": 6
+    },
+    {
+      "cash": 1000,
+      "debt": 0,
+      "valid": 2,
+      "interest": 0
+    },
+    {
+      "cash": 100,
+      "debt": 200,
+      "valid": 3,
+      "interest": 0
+    },
+    {
+      "cash": 999,
+      "debt": 0,
+      "valid": 3,
+      "interest": 29
+    }
+  ],
+  "merchant_goal_orders": 40,
+  "bank_days": 10,
+  "bank_interest": 300,
+  "rich_valid": 40,
+  "raw_upgrades": 500,
+  "alt_net": 2400,
+  "recipe": "S-01",
+  "integration_ids": [
+    "merchant",
+    "banker",
+    "patron"
+  ],
+  "rotation": [
+    "S-01",
+    "S-02",
+    "S-03",
+    "S-04",
+    "S-05",
+    "S-06"
+  ],
+  "orders_per_day": 5,
+  "integration_packs": 10,
+  "integration_customer": 3,
+  "refill_ml": 1000
+}

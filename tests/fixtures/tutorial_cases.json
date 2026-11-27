@@ -1,0 +1,65 @@
+{
+  "save_path": "user://tutorial_test_save.json",
+  "normal_save_path": "user://tutorial_normal_test_save.json",
+  "draw_count": 32,
+  "invalid_rng": [
+    "9223372036854775808",
+    "1.5",
+    "01",
+    "oops"
+  ],
+  "pause_seconds": 300,
+  "random_patience_customer_index": 6,
+  "expected_orders": [
+    {
+      "customer_index": 3,
+      "recipe_id": "S-07"
+    },
+    {
+      "customer_index": 1,
+      "recipe_id": "S-01"
+    },
+    {
+      "customer_index": 2,
+      "recipe_id": "S-01"
+    },
+    {
+      "customer_index": 5,
+      "recipe_id": "M-06"
+    },
+    {
+      "customer_index": 4,
+      "recipe_id": "S-04"
+    },
+    {
+      "customer_index": 0,
+      "recipe_id": "S-01"
+    }
+  ],
+  "expected_income": 612,
+  "expected_money": 964,
+  "spotlight": {
+    "max_actions": 220,
+    "captures": [
+      "request",
+      "ingredient",
+      "pour",
+      "mix_stop",
+      "ice",
+      "shop"
+    ],
+    "save_path": "user://tutorial_spotlight_test.json",
+    "expected_drawers": [
+      "base",
+      "mixer",
+      "cups",
+      "ice",
+      "garnishes"
+    ]
+  },
+  "independent_guest_numbers": [
+    3,
+    5,
+    6
+  ]
+}

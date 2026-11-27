@@ -1,0 +1,33 @@
+{
+  "seed": "20261119",
+  "companion_index": 0,
+  "promotion_id": "S-01",
+  "layout": {
+    "instructions_min_height": 170,
+    "workbench_min_height": 400
+  },
+  "spotlight": {
+    "layer": 60,
+    "shade": "#020a10c9",
+    "border": "#f2d485",
+    "border_width": 3,
+    "padding": 5,
+    "pulse_seconds": 1.6,
+    "story_font_size": 16,
+    "focus_story_top": 12,
+    "focus_story_margin": 26,
+    "focus_story_height": 106,
+    "story_color": "#142c2e",
+    "story_padding": 16,
+    "story_separation": 16
+  },
+  "guided_guest_numbers": [
+    1,
+    2,
+    4
+  ],
+  "settlement_story_keys": {
+    "2": "settlement_second",
+    "4": "settlement_fourth"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "substitution_groups": [],
+  "regular_customer_ids": [],
+  "customer_tags": {},
+  "rare_base_ids": [],
+  "takeover_supply": {},
+  "story_receipts": {},
+  "relief_effect": null,
+  "policy_labels": {
+    "hold": "守价",
+    "follow": "跟价",
+    "premium": "溢价"
+  }
+}

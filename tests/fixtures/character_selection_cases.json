@@ -1,0 +1,19 @@
+{
+  "save_path": "user://selection_test_save.json",
+  "tutorial_save_path": "user://selection_test_tutorial.json",
+  "companion_count": 5,
+  "slot_count": 6,
+  "chosen_companion": 1,
+  "random_seed": 20261121,
+  "window_sizes": [
+    [
+      1280,
+      800
+    ],
+    [
+      960,
+      600
+    ]
+  ],
+  "companion_slots": 5
+}

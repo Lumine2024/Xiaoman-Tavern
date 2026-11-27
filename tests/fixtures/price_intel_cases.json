@@ -1,0 +1,32 @@
+{
+  "save_path": "user://test_price_intel.json",
+  "notice_day": 1,
+  "seed": 24,
+  "disclosure_seeds": [1, 2, 3, 4, 5, 6, 7, 8],
+  "cash": 10000,
+  "stock_ml": 6000,
+  "rival": "karn",
+  "card": "follow",
+  "claim": "lemon_rise",
+  "captain": "船长",
+  "recipe": "M-07",
+  "promotion": "S-01",
+  "display_names": ["威士忌", "伏特加", "金酒", "橙汁", "姜汁啤酒", "柠檬汁"],
+  "display_events": ["price_up_001", "price_down_007", "price_down_031", "lemon_shipping"],
+  "rise_name": "威士忌",
+  "fall_name": "伏特加",
+  "normal_name": "金酒",
+  "market_variation": 0.06,
+  "windows": [[1280, 800], [1440, 900]],
+  "authored_trends": {
+    "trend_M_01": "米娅", "trend_M_02": "塞缪尔", "trend_M_06": "诺雅",
+    "trend_M_09": "咕奇", "trend_M_12": "米娅", "trend_H_01": "埃德",
+    "trend_H_02": "老布洛克", "trend_H_05": "艾露恩", "trend_H_08": "维尔",
+    "trend_H_10": "露米"
+  },
+  "advance_word": "明晚起",
+  "expired_word": "已经结束",
+  "forbidden_words": ["×", "%", "金", "两成"],
+  "price_event_count": 74,
+  "copy_event": "price_up_001"
+}

@@ -1,0 +1,40 @@
+{
+  "fallback_customer": "res://assets/guest.png",
+  "cards": {
+    "background": "res://assets/ui/selection/card_background.png",
+    "frame": "res://assets/ui/selection/card_frame.png",
+    "selected": "res://assets/ui/selection/card_selected.png",
+    "empty": "res://assets/ui/selection/card_empty.png"
+  },
+  "companions": {
+    "judge": "res://assets/portraits/companions/judge.png",
+    "pope": "res://assets/portraits/companions/pope.png",
+    "merchant": "res://assets/portraits/companions/merchant.png",
+    "banker": "res://assets/portraits/companions/banker.png",
+    "patron": "res://assets/portraits/companions/tycoon.png"
+  },
+  "rivals": {
+    "bella": "res://assets/portraits/rivals/bella.png",
+    "duren": "res://assets/portraits/rivals/duren.png",
+    "karn": "res://assets/portraits/rivals/karn.png",
+    "marta": "res://assets/portraits/rivals/marta.png",
+    "olga": "res://assets/portraits/rivals/olga.png",
+    "viola": "res://assets/portraits/rivals/viola.png"
+  },
+  "customers": {
+    "卡莱尔": "res://assets/portraits/customers/卡莱尔.png",
+    "咕奇": "res://assets/portraits/customers/咕奇.png",
+    "埃德": "res://assets/portraits/customers/埃德.png",
+    "塞缪尔": "res://assets/portraits/customers/塞缪尔.png",
+    "奥兰": "res://assets/portraits/customers/奥兰.png",
+    "执事": "res://assets/portraits/customers/执事.png",
+    "米娅": "res://assets/portraits/customers/米娅.png",
+    "维克": "res://assets/portraits/customers/维克.png",
+    "维尔": "res://assets/portraits/customers/维尔.png",
+    "老布洛克": "res://assets/portraits/customers/老布洛克.png",
+    "船长": "res://assets/portraits/customers/船长.png",
+    "艾露恩": "res://assets/portraits/customers/艾露恩.png",
+    "诺雅": "res://assets/portraits/customers/诺雅.png",
+    "露米": "res://assets/portraits/customers/露米.png"
+  }
+}

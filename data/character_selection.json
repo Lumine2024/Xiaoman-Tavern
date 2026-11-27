@@ -1,0 +1,42 @@
+{
+  "slots": 6,
+  "turns": 5,
+  "spin_seconds": 4.2,
+  "select_seconds": 0.48,
+  "colors": [
+    "91cbb5",
+    "dcb779",
+    "bda1c9",
+    "8cb6c6",
+    "cc997e",
+    "a8b88b"
+  ],
+  "companion_heading": "今夜，谁与你同行？",
+  "rival_heading": "街灯那头，会遇见谁？",
+  "companion_hint": "滚动鼠标滚轮换人，选择一位同行者，一起照看这间小酒馆。",
+  "rival_hint": "六位街坊，随机遇见一位。按下后，等名字停在灯下。",
+  "empty_name": "留空",
+  "empty_description": "这张席位还空着。",
+  "portrait_note": "角色立绘待补充",
+  "companion_confirm": "就与这位同行，去备货 →",
+  "roll": "转动命运的酒签",
+  "rolling": "街灯流转，静候相逢……",
+  "begin": "记住这位街坊，选择同行 →",
+  "back": "返回",
+  "companion_tag": "同行者 / 自选",
+  "rival_tag": "竞争者 / 随机",
+  "effect_heading": "同行的影响",
+  "rival_effect_heading": "街坊的经营方式",
+  "card": {
+    "width_ratio": 0.29,
+    "gap_ratio": 0.035,
+    "portrait_height_ratio": 0.45,
+    "padding": 38,
+    "name_font": 28,
+    "detail_font": 17,
+    "caption_font": 14,
+    "portrait_inset": 18,
+    "pitch_y_ratio": 0.81
+  },
+  "companion_slots": 5
+}

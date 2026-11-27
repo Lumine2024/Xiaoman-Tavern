@@ -1,0 +1,13 @@
+{
+  "customer_index": 1,
+  "replacement": "今晚风小了，陪我坐一会儿吧。",
+  "template_key": "cup",
+  "values": {"cup": "高球杯"},
+  "expected_template": "调好了。给它选一只高球杯吧，一杯酒也要有合适的落脚处。",
+  "invalid": [
+    {"kind": "missing"},
+    {"kind": "field", "field": "cost", "value": 999},
+    {"kind": "field", "field": "topic", "value": 42},
+    {"kind": "count"}
+  ]
+}

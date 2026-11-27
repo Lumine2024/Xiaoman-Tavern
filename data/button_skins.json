@@ -1,0 +1,114 @@
+{
+  "profiles": {
+    "common": {
+      "theme_types": [
+        "Button",
+        "OptionButton",
+        "CheckButton"
+      ],
+      "base_type": "",
+      "template_size": [
+        128,
+        64
+      ],
+      "texture_margins": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "content_margins": [
+        16,
+        10,
+        16,
+        10
+      ],
+      "textures": {
+        "normal": "res://assets/ui/buttons/common/normal.png",
+        "hover": "res://assets/ui/buttons/common/hover.png",
+        "pressed": "res://assets/ui/buttons/common/pressed.png",
+        "hover_pressed": "res://assets/ui/buttons/common/hover_pressed.png",
+        "disabled": "res://assets/ui/buttons/common/disabled.png",
+        "focus": "res://assets/ui/buttons/common/focus.png"
+      },
+      "focus_draw_center": false
+    },
+    "dialogue": {
+      "theme_types": [
+        "DialogueButton"
+      ],
+      "base_type": "Button",
+      "template_size": [
+        256,
+        64
+      ],
+      "texture_margins": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "content_margins": [
+        16,
+        10,
+        16,
+        10
+      ],
+      "textures": {
+        "normal": "res://assets/ui/buttons/dialogue/normal.png",
+        "hover": "res://assets/ui/buttons/dialogue/hover.png",
+        "pressed": "res://assets/ui/buttons/dialogue/pressed.png",
+        "hover_pressed": "res://assets/ui/buttons/dialogue/hover_pressed.png",
+        "disabled": "res://assets/ui/buttons/dialogue/disabled.png",
+        "focus": "res://assets/ui/buttons/dialogue/focus.png"
+      },
+      "focus_draw_center": false
+    },
+    "save_slot": {
+      "theme_types": [
+        "SaveSlotButton"
+      ],
+      "base_type": "Button",
+      "template_size": [
+        256,
+        128
+      ],
+      "texture_margins": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "content_margins": [
+        16,
+        10,
+        16,
+        10
+      ],
+      "textures": {
+        "normal": "res://assets/ui/buttons/common/normal.png",
+        "hover": "res://assets/ui/buttons/common/hover.png",
+        "pressed": "res://assets/ui/buttons/common/pressed.png",
+        "hover_pressed": "res://assets/ui/buttons/common/hover_pressed.png",
+        "disabled": "res://assets/ui/buttons/common/disabled.png",
+        "focus": "res://assets/ui/buttons/common/focus.png"
+      },
+      "focus_draw_center": false
+    }
+  },
+  "panel": {
+    "texture": "res://assets/ui/panel.png",
+    "texture_margins": [
+      96,
+      96,
+      96,
+      96
+    ],
+    "content_margins": [
+      40,
+      72,
+      40,
+      40
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "merchant": {
+    "purchase_multiplier": 0.75,
+    "upgrade_multiplier": 0.85,
+    "orders": 40,
+    "ingredients": 6
+  },
+  "banker": {
+    "rate": 0.03,
+    "principal_cap": 2000,
+    "daily_cap": 60,
+    "daily_valid": 3,
+    "interest": 300,
+    "days": 10
+  },
+  "patron": {
+    "investment": 600,
+    "orders": 40,
+    "upgrade_amount": 400,
+    "families": 2,
+    "net": 2400
+  }
+}

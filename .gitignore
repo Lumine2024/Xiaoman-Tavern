@@ -1,0 +1,49 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Exported applications, build products, local editor state
+/build/
+/builds/
+/dist/
+/exports/
+bin/
+obj/
+/export.cfg
+/export_credentials.cfg
+*.exe
+*.dll
+*.pdb
+*.obj
+*.o
+*.a
+*.lib
+*.so
+*.dylib
+*.apk
+*.aab
+*.pck
+*.zip
+*.7z
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+~$*
+__pycache__/
+*.pyc
+.vs/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+/test-output/
+
+# Diagnostic output is disposable. Prefer the OS temporary directory.
+/logs/
+*.log
+
+# Preserve current PNGs, shaders, Godot .uid and texture .import metadata.
+# Keep documentation sources as normal files; do not re-add delivery ZIPs.
+!**/.gdignore

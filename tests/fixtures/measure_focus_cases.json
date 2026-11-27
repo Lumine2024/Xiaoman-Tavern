@@ -1,0 +1,21 @@
+{
+  "save_path": "user://measure_focus_test.json",
+  "minimum_gain": 3,
+  "half_fraction": 0.5,
+  "over_fraction": 1.12,
+  "pause_seconds": 0.25,
+  "resize_sizes": [
+    [
+      1280,
+      800
+    ],
+    [
+      960,
+      600
+    ]
+  ],
+  "stop_point": [
+    0.8,
+    0.8
+  ]
+}

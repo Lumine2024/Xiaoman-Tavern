@@ -1,0 +1,771 @@
+[
+  {
+    "name": "露米",
+    "role": "见习魔女",
+    "color": "c6a1dc",
+    "initial": "露",
+    "request": "no_ice",
+    "good_answer": 0,
+    "favorite": "金酒",
+    "story_id": "露米"
+  },
+  {
+    "color": "c99e6c",
+    "initial": "埃",
+    "request": "standard",
+    "favorite": "威士忌",
+    "choices": [
+      {
+        "tip": 1.0,
+        "revenue": 1.0,
+        "cost": 8.0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 1.0,
+        "answer": "valid",
+        "style": "共情",
+        "source_effect": "共情｜口碑 +1，小费 ×1.0，成本 +8 金",
+        "leak": false
+      },
+      {
+        "tip": 1.1,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 1.0,
+        "answer": "valid",
+        "style": "务实",
+        "source_effect": "务实｜口碑 +1，小费 ×1.1，次日到店优先",
+        "leak": false
+      },
+      {
+        "tip": 0.9,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 0,
+        "answer": "cold",
+        "style": "跑题",
+        "source_effect": "跑题｜口碑 0，小费 ×0.9，段三只说一半",
+        "leak": false
+      }
+    ],
+    "name": "埃德",
+    "role": "夜巡骑士",
+    "id": "埃德",
+    "race": null,
+    "specials": [
+      "S-08"
+    ],
+    "good_answer": 0,
+    "order_recipe_id": "S-02",
+    "order_spec": {
+      "recipe": "S-02",
+      "add_amounts": {
+        "苏打水": 20
+      }
+    },
+    "story_id": "埃德"
+  },
+  {
+    "color": "8fc8b5",
+    "initial": "诺",
+    "request": "standard",
+    "favorite": "朗姆",
+    "choices": [
+      {
+        "tip": 1.0,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 1.0,
+        "answer": "valid",
+        "style": "共情",
+        "source_effect": "共情｜口碑 +1，小费 ×1.0，情报完整",
+        "leak": false
+      },
+      {
+        "tip": 1.1,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 1.0,
+        "answer": "valid",
+        "style": "务实",
+        "source_effect": "务实｜口碑 +1，小费 ×1.1，次日进货 −5%",
+        "leak": false
+      },
+      {
+        "tip": 0.9,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 0,
+        "answer": "cold",
+        "style": "跑题",
+        "source_effect": "跑题｜口碑 0，小费 ×0.9，只给一半情报",
+        "leak": false
+      }
+    ],
+    "name": "诺雅",
+    "role": "游商",
+    "id": "诺雅",
+    "race": null,
+    "specials": [
+      "S-02a"
+    ],
+    "good_answer": 0,
+    "order_recipe_id": "M-09",
+    "order_spec": {},
+    "story_id": "诺雅"
+  },
+  {
+    "color": "90aecf",
+    "initial": "塞",
+    "request": "standard",
+    "favorite": "干邑",
+    "choices": [
+      {
+        "tip": 1.0,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 1.0,
+        "answer": "valid",
+        "style": "共情",
+        "source_effect": "共情｜口碑 +1，情报完整",
+        "leak": false
+      },
+      {
+        "tip": 1.0,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 1.0,
+        "answer": "valid",
+        "style": "务实",
+        "source_effect": "务实｜口碑 +1，小费 ×1.0，情报完整",
+        "leak": false
+      },
+      {
+        "tip": 0.9,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 0,
+        "answer": "cold",
+        "style": "跑题",
+        "source_effect": "跑题｜口碑 0，小费 ×0.9，情报不完整",
+        "leak": false
+      }
+    ],
+    "name": "塞缪尔",
+    "role": "档案管理员",
+    "id": "塞缪尔",
+    "race": null,
+    "specials": [
+      "S-07"
+    ],
+    "good_answer": 0,
+    "order_recipe_id": "M-07",
+    "order_spec": {
+      "recipe": "M-07",
+      "no_garnish": true,
+      "minimum_tier": 2
+    },
+    "story_id": "塞缪尔"
+  },
+  {
+    "color": "d59a9f",
+    "initial": "米",
+    "request": "standard",
+    "favorite": "伏特加",
+    "choices": [
+      {
+        "tip": 1.0,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 1.0,
+        "reputation": 1.0,
+        "answer": "valid",
+        "style": "共情",
+        "source_effect": "共情｜口碑 +1，小费 ×1.0，次日客流 +1",
+        "leak": false
+      },
+      {
+        "tip": 1.1,
+        "revenue": 1.0,
+        "cost": 20.0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 1.0,
+        "answer": "valid",
+        "style": "务实",
+        "source_effect": "务实｜口碑 +1，小费 ×1.1，成本 +20 金",
+        "leak": false
+      },
+      {
+        "tip": 0.9,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 0,
+        "answer": "cold",
+        "style": "跑题",
+        "source_effect": "跑题｜口碑 0，小费 ×0.9，S-04 全额生效",
+        "leak": false
+      }
+    ],
+    "name": "米娅",
+    "role": "街头乐师",
+    "id": "米娅",
+    "race": null,
+    "specials": [
+      "S-04"
+    ],
+    "good_answer": 0,
+    "order_recipe_id": "S-05",
+    "order_spec": {},
+    "story_id": "米娅"
+  },
+  {
+    "color": "c3bd7c",
+    "initial": "维",
+    "request": "standard",
+    "favorite": "龙舌兰",
+    "choices": [
+      {
+        "tip": 1.1,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 1.0,
+        "answer": "valid",
+        "style": "共情",
+        "source_effect": "共情｜口碑 +1，小费 ×1.1",
+        "leak": false
+      },
+      {
+        "tip": 1.0,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 1.0,
+        "answer": "valid",
+        "style": "务实",
+        "source_effect": "务实｜口碑 +1，小费 ×1.0，情报完整",
+        "leak": false
+      },
+      {
+        "tip": 0.9,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 0,
+        "answer": "cold",
+        "style": "跑题",
+        "source_effect": "跑题｜口碑 0，小费 ×0.9，段三只说一半",
+        "leak": false
+      }
+    ],
+    "name": "维克",
+    "role": "炼金术士",
+    "id": "维克",
+    "race": null,
+    "specials": [
+      "S-03"
+    ],
+    "good_answer": 0,
+    "order_recipe_id": "M-06",
+    "order_spec": {},
+    "story_id": "维克"
+  },
+  {
+    "color": "b8c9b8",
+    "initial": "客",
+    "request": "standard",
+    "favorite": "",
+    "choices": [
+      {
+        "tip": 1.1,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 1.0,
+        "answer": "valid",
+        "style": "共情",
+        "source_effect": "共情｜口碑 +1，小费 ×1.1，段三全说",
+        "leak": false
+      },
+      {
+        "tip": 1.0,
+        "revenue": 0.9,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 1.0,
+        "answer": "valid",
+        "style": "务实",
+        "source_effect": "务实｜口碑 +1，小费 ×1.0，本杯收益 −10%",
+        "leak": false
+      },
+      {
+        "tip": 0.9,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 0,
+        "answer": "cold",
+        "style": "跑题",
+        "source_effect": "跑题｜口碑 0，小费 ×0.9，段三只说一半",
+        "leak": false
+      }
+    ],
+    "name": "船长",
+    "role": "远洋船长",
+    "id": "船长",
+    "race": "人类",
+    "specials": [
+      "S-01"
+    ],
+    "good_answer": 0,
+    "order_recipe_id": "M-01",
+    "order_spec": {
+      "recipe": "M-01",
+      "amounts": {
+        "威士忌": 120,
+        "糖浆": 20,
+        "苦精": 1
+      }
+    },
+    "story_id": "船长"
+  },
+  {
+    "color": "b8c9b8",
+    "initial": "客",
+    "request": "standard",
+    "favorite": "",
+    "choices": [
+      {
+        "tip": 1.1,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 15.0,
+        "traffic": 0,
+        "reputation": 1.0,
+        "answer": "valid",
+        "style": "共情",
+        "source_effect": "共情｜口碑 +1，小费 ×1.1，耗时 +15 秒",
+        "leak": false
+      },
+      {
+        "tip": 1.0,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 1.0,
+        "answer": "valid",
+        "style": "务实",
+        "source_effect": "务实｜口碑 +1，小费 ×1.0，次日可查对手配方",
+        "leak": false
+      },
+      {
+        "tip": 0.9,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 0,
+        "answer": "cold",
+        "style": "跑题",
+        "source_effect": "跑题｜口碑 0，小费 ×0.9，段三只说一半",
+        "leak": false
+      }
+    ],
+    "name": "维尔",
+    "role": "评酒人",
+    "id": "维尔",
+    "race": null,
+    "specials": [
+      "S-02b"
+    ],
+    "good_answer": 0,
+    "order_recipe_id": "M-01",
+    "order_spec": {
+      "recipe": "M-01",
+      "amounts": {
+        "威士忌": 120,
+        "糖浆": 20,
+        "苦精": 3
+      },
+      "no_ice": true,
+      "no_garnish": true,
+      "minimum_tier": 3
+    },
+    "story_id": "维尔"
+  },
+  {
+    "color": "b8c9b8",
+    "initial": "客",
+    "request": "standard",
+    "favorite": "",
+    "choices": [
+      {
+        "tip": 1.0,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 1.0,
+        "answer": "valid",
+        "style": "共情",
+        "source_effect": "共情｜口碑 +1，小费 ×1.0",
+        "leak": false
+      },
+      {
+        "tip": 1.1,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 1.0,
+        "answer": "valid",
+        "style": "务实",
+        "source_effect": "务实｜口碑 +1，小费 ×1.1，需额外备料",
+        "leak": false
+      },
+      {
+        "tip": 0.9,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 0,
+        "answer": "cold",
+        "style": "跑题",
+        "source_effect": "跑题｜口碑 0，小费 ×0.9，段三只说一半",
+        "leak": false
+      }
+    ],
+    "name": "执事",
+    "role": "教皇的人",
+    "id": "执事",
+    "race": null,
+    "specials": [
+      "S-05",
+      "S-08"
+    ],
+    "good_answer": 0,
+    "order_recipe_id": "S-08",
+    "order_spec": {
+      "recipe": "S-08",
+      "amounts": {
+        "苏打水": 60
+      },
+      "time_limit": 90
+    },
+    "story_id": "执事"
+  },
+  {
+    "color": "b8c9b8",
+    "initial": "客",
+    "request": "standard",
+    "favorite": "",
+    "choices": [
+      {
+        "tip": 1.0,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 0,
+        "answer": "valid",
+        "style": "热情",
+        "source_effect": "热情｜口碑 0，配方外流，S-09 生效",
+        "leak": true
+      },
+      {
+        "tip": 1.1,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 1.0,
+        "answer": "valid",
+        "style": "守住",
+        "source_effect": "守住｜口碑 +1，小费 ×1.1，无泄露",
+        "leak": false
+      },
+      {
+        "tip": 1.0,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 1.0,
+        "answer": "valid",
+        "style": "识破",
+        "source_effect": "识破｜口碑 +1，对手延后 2 天出手",
+        "leak": false,
+        "opponent_delay": 2
+      }
+    ],
+    "name": "咕奇",
+    "role": "哥布林跑腿",
+    "id": "咕奇",
+    "race": "哥布林",
+    "specials": [
+      "S-09"
+    ],
+    "good_answer": 1,
+    "order_recipe_id": "",
+    "order_spec": {},
+    "story_id": "咕奇"
+  },
+  {
+    "color": "b8c9b8",
+    "initial": "客",
+    "request": "standard",
+    "favorite": "",
+    "choices": [
+      {
+        "tip": 1.1,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 1.0,
+        "answer": "valid",
+        "style": "共情",
+        "source_effect": "共情｜口碑 +1，小费 ×1.1",
+        "leak": false
+      },
+      {
+        "tip": 1.0,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 1.0,
+        "answer": "valid",
+        "style": "务实",
+        "source_effect": "务实｜口碑 +1，小费 ×1.0，情报完整",
+        "leak": false
+      },
+      {
+        "tip": 0.9,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 0,
+        "answer": "cold",
+        "style": "跑题",
+        "source_effect": "跑题｜口碑 0，小费 ×0.9，段三只说一半",
+        "leak": false
+      }
+    ],
+    "name": "艾露恩",
+    "role": "精灵",
+    "id": "艾露恩",
+    "race": "精灵",
+    "specials": [
+      "S-03"
+    ],
+    "good_answer": 0,
+    "order_recipe_id": "M-07",
+    "order_spec": {
+      "recipe": "M-07",
+      "garnish": [
+        "橙皮"
+      ]
+    },
+    "story_id": "艾露恩"
+  },
+  {
+    "color": "b8c9b8",
+    "initial": "客",
+    "request": "standard",
+    "favorite": "",
+    "choices": [
+      {
+        "tip": 1.0,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 0,
+        "answer": "valid",
+        "style": "共情",
+        "source_effect": "共情｜留人，每日开销 +15 金",
+        "leak": false
+      },
+      {
+        "tip": 1.0,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 1.0,
+        "answer": "valid",
+        "style": "务实",
+        "source_effect": "务实｜开销 +10 金，口碑 +1",
+        "leak": false
+      },
+      {
+        "tip": 0.9,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 0,
+        "answer": "cold",
+        "style": "跑题",
+        "source_effect": "跑题｜口碑 0，学徒流失，S-10 生效",
+        "leak": false
+      }
+    ],
+    "name": "老布洛克",
+    "role": "矮人",
+    "id": "老布洛克",
+    "race": "矮人",
+    "specials": [
+      "S-10"
+    ],
+    "good_answer": 0,
+    "order_recipe_id": "",
+    "order_spec": {
+      "recipe": "S-02",
+      "remove_liquids": [
+        "苏打水"
+      ]
+    },
+    "story_id": "老布洛克"
+  },
+  {
+    "color": "b8c9b8",
+    "initial": "客",
+    "request": "standard",
+    "favorite": "",
+    "choices": [
+      {
+        "tip": 1.1,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 1.0,
+        "reputation": 1.0,
+        "answer": "valid",
+        "style": "共情",
+        "source_effect": "共情｜口碑 +1，小费 ×1.1，次日客流 +1",
+        "leak": false
+      },
+      {
+        "tip": 1.0,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 1.0,
+        "answer": "valid",
+        "style": "务实",
+        "source_effect": "务实｜口碑 +1，小费 ×1.0，次日备料准",
+        "leak": false
+      },
+      {
+        "tip": 0.9,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 0,
+        "answer": "cold",
+        "style": "跑题",
+        "source_effect": "跑题｜口碑 0，小费 ×0.9，段三只说一半",
+        "leak": false
+      }
+    ],
+    "name": "奥兰",
+    "role": "法师",
+    "id": "奥兰",
+    "race": null,
+    "specials": [
+      "S-08"
+    ],
+    "good_answer": 0,
+    "order_recipe_id": "S-01",
+    "order_spec": {},
+    "story_id": "奥兰"
+  },
+  {
+    "color": "b8c9b8",
+    "initial": "客",
+    "request": "standard",
+    "favorite": "",
+    "choices": [
+      {
+        "tip": 1.1,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 1.0,
+        "reputation": 1.0,
+        "answer": "valid",
+        "style": "共情",
+        "source_effect": "共情｜口碑 +1，小费 ×1.1，次日客流 +1",
+        "leak": false
+      },
+      {
+        "tip": 1.0,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 1.0,
+        "answer": "valid",
+        "style": "务实",
+        "source_effect": "务实｜口碑 +1，小费 ×1.0，情报完整",
+        "leak": false
+      },
+      {
+        "tip": 0.9,
+        "revenue": 1.0,
+        "cost": 0,
+        "seconds": 0,
+        "traffic": 0,
+        "reputation": 0,
+        "answer": "cold",
+        "style": "跑题",
+        "source_effect": "跑题｜口碑 0，小费 ×0.9，段三只说一半",
+        "leak": false
+      }
+    ],
+    "name": "卡莱尔",
+    "role": "旧日的调酒师",
+    "id": "卡莱尔",
+    "race": "幽魂",
+    "specials": [
+      "S-07"
+    ],
+    "good_answer": 0,
+    "order_recipe_id": "",
+    "order_spec": {},
+    "story_id": "卡莱尔"
+  }
+]

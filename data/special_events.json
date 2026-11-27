@@ -1,0 +1,12 @@
+{
+  "S-01":{"title":"断货","text":"港口卸货不顺，明日的{ingredient}恐怕到不了。","delay":1,"shortage_days":1,"opponent_price_multiplier":0.9},
+  "S-02":{"title":"涨价","text":"对面明天还要涨，你打算跟吗？","delay":1,"purchase_multiplier":1.15,"hold_traffic":2,"raise_traffic":-1},
+  "S-03":{"title":"追加要求","text":"客人提出了新的配方要求。","delay":1,"replacement":null},
+  "S-04":{"title":"挖客","text":"对面要买一送一，你要是没动作，熟客就被拉过去了。","delay":3,"traffic":-1,"follow_margin_multiplier":0.5},
+  "S-05":{"title":"抢货","text":"对面今晚把{ingredient}整批收了，明天你要留心。","delay":1,"stock_multiplier":0.5,"purchase_multiplier":1.2},
+  "S-06":{"title":"熟客预约","text":"明天我带个人来，还是这个，别换配方。","delay":1,"revenue_multiplier":1.2,"unprepared_reputation":-2},
+  "S-07":{"title":"口碑","text":"外面又在传你家的酒淡了，明天的人可会听进去。","delay":1,"traffic":-1},
+  "S-08":{"title":"巡查","text":"明晚法官要巡这条巷子，对面已经把门口擦了三遍。","delay":1,"inspection":true,"decoration_threshold":null},
+  "S-09":{"title":"偷师","text":"对面派人来学你的主推，你要不要告诉他？","delay":1,"sale_multiplier":0.85,"promotion_loss":0.1,"detect_delay":2},
+  "S-10":{"title":"挖角","text":"对面托人来挖你的帮手，你留不留？","delay":1,"lost_time_multiplier":1.05,"lost_tolerance_delta":-0.01}
+}

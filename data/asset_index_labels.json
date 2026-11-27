@@ -1,0 +1,552 @@
+{
+  "groups": {
+    "liquids": {
+      "category": "液体",
+      "usage": "基酒、辅料及后注抽屉；data/bar_assets.json → scripts/ui/bar/workbench.gd",
+      "note": "保持瓶身居中、透明留白和底部基线；同组画布比例一致",
+      "logical_size": [
+        130,
+        180
+      ]
+    },
+    "cups": {
+      "category": "杯具",
+      "usage": "酒杯抽屉、台面及结算近景；workbench.gd／drink_display.gd",
+      "note": "杯具居中、底部基线一致，杯内区域透明；酒液与气泡由程序绘制，换轮廓须更新 bar_ui.glass_liquids，并检查冰块／配饰遮挡",
+      "logical_size": [
+        130,
+        180
+      ]
+    },
+    "ice": {
+      "category": "冰型",
+      "usage": "冰块抽屉、台面及结算近景；workbench.gd／drink_display.gd",
+      "note": "保留无冰选项图标；实际冰块按bar_ui.presentation.ice_regions裁切留白，台面与近景均贴近杯底并沿杯壁裁切；换图后重算有效区域与底部间距",
+      "logical_size": [
+        130,
+        180
+      ]
+    },
+    "garnishes": {
+      "category": "装饰",
+      "usage": "装饰抽屉、台面及结算近景；workbench.gd／drink_display.gd（薄荷仅作装饰）",
+      "note": "实际配饰复用此PNG；保持透明留白和比例，需检查杯沿位置、多配饰及近景；不是只改抽屉图标",
+      "logical_size": [
+        130,
+        180
+      ]
+    }
+  },
+  "files": {
+    "icon.png": {
+      "name": "项目图标",
+      "category": "项目",
+      "usage": "project.godot → config/icon",
+      "note": "保持正方形，保留图标轮廓外透明区",
+      "logical_size": [
+        128,
+        128
+      ]
+    },
+    "assets/tavern.png": {
+      "name": "酒馆背景",
+      "category": "场景",
+      "usage": "scenes/main.tscn → TavernBackdrop；scene_transition.gd 的转场背景复用",
+      "note": "完整背景原稿不透明；16:10，按宽高比覆盖视口，边缘可能裁切",
+      "logical_size": [
+        1440,
+        900
+      ]
+    },
+    "assets/guest.png": {
+      "name": "顾客后备立绘",
+      "category": "角色",
+      "usage": "scripts/game/main.gd → GuestPortrait",
+      "note": "仅当story_id未映射时使用；14位顾客已各用独立PNG，保留原色，不再整体染色",
+      "logical_size": [
+        440,
+        680
+      ]
+    },
+    "assets/shaker.png": {
+      "name": "调酒壶",
+      "category": "器具",
+      "usage": "scripts/ui/bar/workbench.gd → Shaker",
+      "note": "透明底、居中、底线一致；量取后倾斜及调制／直调近景摇晃均复用此图；检查壶体支点与放大清晰度",
+      "logical_size": [
+        130,
+        180
+      ]
+    },
+    "assets/bar/bell.png": {
+      "name": "出品铃铛",
+      "category": "器具",
+      "usage": "scripts/ui/bar/workbench.gd → Bell",
+      "note": "透明底，物体居中；按钮完整矩形仍可点击",
+      "logical_size": [
+        120,
+        110
+      ]
+    },
+    "assets/bar/counter.png": {
+      "name": "调酒台",
+      "category": "场景",
+      "usage": "workbench.gd 台面／served_drink.gd 结算大桌面",
+      "note": "dark原稿保留；全图按counter_crop取样，counter_surface按bar_ui.workbench_layout.counter_edges遮去外部，两处台面共用；不按木纹亮度抠黑",
+      "logical_size": [
+        620,
+        340
+      ]
+    },
+    "assets/bar/drawer.png": {
+      "name": "抽屉面板",
+      "category": "场景",
+      "usage": "scripts/ui/bar/workbench.gd → 抽屉按钮 StyleBoxTexture",
+      "note": "裁去上方留白后作为柜体按钮背景；位于桌板下方；文字由程序绘制",
+      "logical_size": [
+        250,
+        140
+      ]
+    },
+    "assets/bar/cylinder.png": {
+      "name": "量筒外壳",
+      "category": "器具",
+      "usage": "scripts/ui/bar/cylinder.gd → GLASS",
+      "note": "逻辑90×220；内壁读bar_ui.cylinder.well_rect归一化区域，刻度与目标线程序绘制，换轮廓后复核",
+      "logical_size": [
+        90,
+        220
+      ]
+    },
+    "assets/ui/shop_placeholder.png": {
+      "name": "商店背景（dark版）",
+      "category": "场景",
+      "usage": "data/interface.json → scripts/ui/shop_view.gd",
+      "note": "已替换为协作者dark包；左侧空柜台、右侧货架；包内没有独立店员，商品控件独立覆盖",
+      "logical_size": [
+        1440,
+        900
+      ]
+    },
+    "assets/portraits/companions/judge.png": {
+      "name": "法官立绘",
+      "category": "同行者",
+      "usage": "data/character_art.json → character_selection.gd／卡牌立绘窗",
+      "note": "按稳定ID绑定；等比完整显示于立绘窗，保留原色；不含名字／效果文字",
+      "logical_size": [
+        334,
+        250
+      ]
+    },
+    "assets/portraits/companions/pope.png": {
+      "name": "教皇立绘",
+      "category": "同行者",
+      "usage": "data/character_art.json → character_selection.gd／卡牌立绘窗",
+      "note": "按稳定ID绑定；等比完整显示于立绘窗，保留原色；不含名字／效果文字",
+      "logical_size": [
+        334,
+        250
+      ]
+    },
+    "assets/portraits/rivals/bella.png": {
+      "name": "快嘴贝拉立绘",
+      "category": "竞争者",
+      "usage": "data/character_art.json → character_selection.gd／卡牌立绘窗",
+      "note": "按稳定ID绑定；等比完整显示于立绘窗，保留原色；不含名字／效果文字",
+      "logical_size": [
+        334,
+        250
+      ]
+    },
+    "assets/portraits/rivals/duren.png": {
+      "name": "老账房杜伦立绘",
+      "category": "竞争者",
+      "usage": "data/character_art.json → character_selection.gd／卡牌立绘窗",
+      "note": "按稳定ID绑定；等比完整显示于立绘窗，保留原色；不含名字／效果文字",
+      "logical_size": [
+        334,
+        250
+      ]
+    },
+    "assets/portraits/rivals/karn.png": {
+      "name": "瘸子卡恩立绘",
+      "category": "竞争者",
+      "usage": "data/character_art.json → character_selection.gd／卡牌立绘窗",
+      "note": "按稳定ID绑定；等比完整显示于立绘窗，保留原色；不含名字／效果文字",
+      "logical_size": [
+        334,
+        250
+      ]
+    },
+    "assets/portraits/rivals/marta.png": {
+      "name": "玛尔塔立绘",
+      "category": "竞争者",
+      "usage": "data/character_art.json → character_selection.gd／卡牌立绘窗",
+      "note": "按稳定ID绑定；等比完整显示于立绘窗，保留原色；不含名字／效果文字",
+      "logical_size": [
+        334,
+        250
+      ]
+    },
+    "assets/portraits/rivals/olga.png": {
+      "name": "听风的奥尔加立绘",
+      "category": "竞争者",
+      "usage": "data/character_art.json → character_selection.gd／卡牌立绘窗",
+      "note": "按稳定ID绑定；等比完整显示于立绘窗，保留原色；不含名字／效果文字",
+      "logical_size": [
+        334,
+        250
+      ]
+    },
+    "assets/portraits/rivals/viola.png": {
+      "name": "银匙维奥拉立绘",
+      "category": "竞争者",
+      "usage": "data/character_art.json → character_selection.gd／卡牌立绘窗",
+      "note": "按稳定ID绑定；等比完整显示于立绘窗，保留原色；不含名字／效果文字",
+      "logical_size": [
+        334,
+        250
+      ]
+    },
+    "assets/portraits/customers/卡莱尔.png": {
+      "name": "卡莱尔立绘",
+      "category": "顾客",
+      "usage": "data/character_art.json → main.gd／GuestPortrait",
+      "note": "按story_id绑定；透明全身图，保留原色与原比例",
+      "logical_size": [
+        440,
+        680
+      ]
+    },
+    "assets/portraits/customers/咕奇.png": {
+      "name": "咕奇立绘",
+      "category": "顾客",
+      "usage": "data/character_art.json → main.gd／GuestPortrait",
+      "note": "按story_id绑定；透明全身图，保留原色与原比例",
+      "logical_size": [
+        440,
+        680
+      ]
+    },
+    "assets/portraits/customers/埃德.png": {
+      "name": "埃德立绘",
+      "category": "顾客",
+      "usage": "data/character_art.json → main.gd／GuestPortrait",
+      "note": "按story_id绑定；透明全身图，保留原色与原比例",
+      "logical_size": [
+        440,
+        680
+      ]
+    },
+    "assets/portraits/customers/塞缪尔.png": {
+      "name": "塞缪尔立绘",
+      "category": "顾客",
+      "usage": "data/character_art.json → main.gd／GuestPortrait",
+      "note": "按story_id绑定；透明全身图，保留原色与原比例",
+      "logical_size": [
+        440,
+        680
+      ]
+    },
+    "assets/portraits/customers/奥兰.png": {
+      "name": "奥兰立绘",
+      "category": "顾客",
+      "usage": "data/character_art.json → main.gd／GuestPortrait",
+      "note": "按story_id绑定；透明全身图，保留原色与原比例",
+      "logical_size": [
+        440,
+        680
+      ]
+    },
+    "assets/portraits/customers/执事.png": {
+      "name": "执事立绘",
+      "category": "顾客",
+      "usage": "data/character_art.json → main.gd／GuestPortrait",
+      "note": "按story_id绑定；透明全身图，保留原色与原比例",
+      "logical_size": [
+        440,
+        680
+      ]
+    },
+    "assets/portraits/customers/米娅.png": {
+      "name": "米娅立绘",
+      "category": "顾客",
+      "usage": "data/character_art.json → main.gd／GuestPortrait",
+      "note": "按story_id绑定；透明全身图，保留原色与原比例",
+      "logical_size": [
+        440,
+        680
+      ]
+    },
+    "assets/portraits/customers/维克.png": {
+      "name": "维克立绘",
+      "category": "顾客",
+      "usage": "data/character_art.json → main.gd／GuestPortrait",
+      "note": "按story_id绑定；透明全身图，保留原色与原比例",
+      "logical_size": [
+        440,
+        680
+      ]
+    },
+    "assets/portraits/customers/维尔.png": {
+      "name": "维尔立绘",
+      "category": "顾客",
+      "usage": "data/character_art.json → main.gd／GuestPortrait",
+      "note": "按story_id绑定；透明全身图，保留原色与原比例",
+      "logical_size": [
+        440,
+        680
+      ]
+    },
+    "assets/portraits/customers/老布洛克.png": {
+      "name": "老布洛克立绘",
+      "category": "顾客",
+      "usage": "data/character_art.json → main.gd／GuestPortrait",
+      "note": "按story_id绑定；透明全身图，保留原色与原比例",
+      "logical_size": [
+        440,
+        680
+      ]
+    },
+    "assets/portraits/customers/船长.png": {
+      "name": "船长立绘",
+      "category": "顾客",
+      "usage": "data/character_art.json → main.gd／GuestPortrait",
+      "note": "按story_id绑定；透明全身图，保留原色与原比例",
+      "logical_size": [
+        440,
+        680
+      ]
+    },
+    "assets/portraits/customers/艾露恩.png": {
+      "name": "艾露恩立绘",
+      "category": "顾客",
+      "usage": "data/character_art.json → main.gd／GuestPortrait",
+      "note": "按story_id绑定；透明全身图，保留原色与原比例",
+      "logical_size": [
+        440,
+        680
+      ]
+    },
+    "assets/portraits/customers/诺雅.png": {
+      "name": "诺雅立绘",
+      "category": "顾客",
+      "usage": "data/character_art.json → main.gd／GuestPortrait",
+      "note": "按story_id绑定；透明全身图，保留原色与原比例",
+      "logical_size": [
+        440,
+        680
+      ]
+    },
+    "assets/portraits/customers/露米.png": {
+      "name": "露米立绘",
+      "category": "顾客",
+      "usage": "data/character_art.json → main.gd／GuestPortrait",
+      "note": "按story_id绑定；透明全身图，保留原色与原比例",
+      "logical_size": [
+        440,
+        680
+      ]
+    },
+    "assets/ui/selection/card_background.png": {
+      "name": "卡牌底图",
+      "category": "选人UI",
+      "usage": "data/character_art.json → character_selection.gd",
+      "note": "整卡底图；名字及效果由程序叠加",
+      "logical_size": [
+        374,
+        556
+      ]
+    },
+    "assets/ui/selection/card_frame.png": {
+      "name": "普通立绘框",
+      "category": "选人UI",
+      "usage": "data/character_art.json → character_selection.gd",
+      "note": "立绘窗框；保持透明中心，在人物下方绘制",
+      "logical_size": [
+        334,
+        250
+      ]
+    },
+    "assets/ui/selection/card_selected.png": {
+      "name": "选中立绘框",
+      "category": "选人UI",
+      "usage": "data/character_art.json → character_selection.gd",
+      "note": "选中立绘窗框，源图中心黑色不透明，必须先画框再画人物",
+      "logical_size": [
+        334,
+        250
+      ]
+    },
+    "assets/ui/selection/card_empty.png": {
+      "name": "空席凳子",
+      "category": "选人UI",
+      "usage": "data/character_art.json → character_selection.gd",
+      "note": "仅用于四个未定义空席；图片不改变席位禁用状态",
+      "logical_size": [
+        334,
+        250
+      ]
+    },
+    "assets/ui/buttons/common/normal.png": {
+      "name": "通用按钮／普通",
+      "category": "按钮UI",
+      "usage": "data/button_skins.json → button_skin.gd；通用控件及存档栏位共享",
+      "note": "20261124交付木金皮肤；存档栏位复用通用六态；九宫格12px；焦点由draw_center=false只画边缘，原PNG字节保留",
+      "logical_size": [
+        128,
+        64
+      ]
+    },
+    "assets/ui/buttons/common/hover.png": {
+      "name": "通用按钮／悬停",
+      "category": "按钮UI",
+      "usage": "data/button_skins.json → button_skin.gd；通用控件及存档栏位共享",
+      "note": "20261124交付木金皮肤；存档栏位复用通用六态；九宫格12px；焦点由draw_center=false只画边缘，原PNG字节保留",
+      "logical_size": [
+        128,
+        64
+      ]
+    },
+    "assets/ui/buttons/common/pressed.png": {
+      "name": "通用按钮／按下／选中",
+      "category": "按钮UI",
+      "usage": "data/button_skins.json → button_skin.gd；通用控件及存档栏位共享",
+      "note": "20261124交付木金皮肤；存档栏位复用通用六态；九宫格12px；焦点由draw_center=false只画边缘，原PNG字节保留",
+      "logical_size": [
+        128,
+        64
+      ]
+    },
+    "assets/ui/buttons/common/hover_pressed.png": {
+      "name": "通用按钮／选中悬停",
+      "category": "按钮UI",
+      "usage": "data/button_skins.json → button_skin.gd；通用控件及存档栏位共享",
+      "note": "20261124交付木金皮肤；存档栏位复用通用六态；九宫格12px；焦点由draw_center=false只画边缘，原PNG字节保留",
+      "logical_size": [
+        128,
+        64
+      ]
+    },
+    "assets/ui/buttons/common/disabled.png": {
+      "name": "通用按钮／禁用",
+      "category": "按钮UI",
+      "usage": "data/button_skins.json → button_skin.gd；通用控件及存档栏位共享",
+      "note": "20261124交付木金皮肤；存档栏位复用通用六态；九宫格12px；焦点由draw_center=false只画边缘，原PNG字节保留",
+      "logical_size": [
+        128,
+        64
+      ]
+    },
+    "assets/ui/buttons/common/focus.png": {
+      "name": "通用按钮／焦点叠加",
+      "category": "按钮UI",
+      "usage": "data/button_skins.json → button_skin.gd；通用控件及存档栏位共享",
+      "note": "20261124交付木金皮肤；存档栏位复用通用六态；九宫格12px；焦点由draw_center=false只画边缘，原PNG字节保留",
+      "logical_size": [
+        128,
+        64
+      ]
+    },
+    "assets/ui/buttons/dialogue/normal.png": {
+      "name": "对话按钮／普通",
+      "category": "按钮UI",
+      "usage": "data/button_skins.json → button_skin.gd；main.gd交谈选项",
+      "note": "20261124交付木金皮肤；存档栏位复用通用六态；九宫格12px；焦点由draw_center=false只画边缘，原PNG字节保留",
+      "logical_size": [
+        256,
+        64
+      ]
+    },
+    "assets/ui/buttons/dialogue/hover.png": {
+      "name": "对话按钮／悬停",
+      "category": "按钮UI",
+      "usage": "data/button_skins.json → button_skin.gd；main.gd交谈选项",
+      "note": "20261124交付木金皮肤；存档栏位复用通用六态；九宫格12px；焦点由draw_center=false只画边缘，原PNG字节保留",
+      "logical_size": [
+        256,
+        64
+      ]
+    },
+    "assets/ui/buttons/dialogue/pressed.png": {
+      "name": "对话按钮／按下／选中",
+      "category": "按钮UI",
+      "usage": "data/button_skins.json → button_skin.gd；main.gd交谈选项",
+      "note": "20261124交付木金皮肤；存档栏位复用通用六态；九宫格12px；焦点由draw_center=false只画边缘，原PNG字节保留",
+      "logical_size": [
+        256,
+        64
+      ]
+    },
+    "assets/ui/buttons/dialogue/hover_pressed.png": {
+      "name": "对话按钮／选中悬停",
+      "category": "按钮UI",
+      "usage": "data/button_skins.json → button_skin.gd；main.gd交谈选项",
+      "note": "20261124交付木金皮肤；存档栏位复用通用六态；九宫格12px；焦点由draw_center=false只画边缘，原PNG字节保留",
+      "logical_size": [
+        256,
+        64
+      ]
+    },
+    "assets/ui/buttons/dialogue/disabled.png": {
+      "name": "对话按钮／禁用",
+      "category": "按钮UI",
+      "usage": "data/button_skins.json → button_skin.gd；main.gd交谈选项",
+      "note": "20261124交付木金皮肤；存档栏位复用通用六态；九宫格12px；焦点由draw_center=false只画边缘，原PNG字节保留",
+      "logical_size": [
+        256,
+        64
+      ]
+    },
+    "assets/ui/buttons/dialogue/focus.png": {
+      "name": "对话按钮／焦点叠加",
+      "category": "按钮UI",
+      "usage": "data/button_skins.json → button_skin.gd；main.gd交谈选项",
+      "note": "20261124交付木金皮肤；存档栏位复用通用六态；九宫格12px；焦点由draw_center=false只画边缘，原PNG字节保留",
+      "logical_size": [
+        256,
+        64
+      ]
+    },
+    "assets/ui/panel.png": {
+      "category": "面板UI",
+      "note": "20261124交付；九宫格96px保留角花，内容边距40/72/40/40；不含文字",
+      "name": "设置与存档面板",
+      "logical_size": [
+        512,
+        512
+      ],
+      "usage": "button_skins.json.panel → pause_menu.gd"
+    },
+    "assets/portraits/companions/merchant.png": {
+      "name": "商人 · 同行者立绘",
+      "category": "同行者",
+      "usage": "五位同行者选人卡牌；data/character_art.json → character_selection.gd",
+      "note": "按稳定ID绑定；等比完整显示于立绘窗，保留原色；不含名字／效果文字",
+      "logical_size": [
+        334,
+        250
+      ]
+    },
+    "assets/portraits/companions/banker.png": {
+      "name": "银行家 · 同行者立绘",
+      "category": "同行者",
+      "usage": "五位同行者选人卡牌；data/character_art.json → character_selection.gd",
+      "note": "按稳定ID绑定；等比完整显示于立绘窗，保留原色；不含名字／效果文字",
+      "logical_size": [
+        334,
+        250
+      ]
+    },
+    "assets/portraits/companions/tycoon.png": {
+      "name": "富豪 · 同行者立绘",
+      "category": "同行者",
+      "usage": "五位同行者选人卡牌；data/character_art.json → character_selection.gd",
+      "note": "按稳定ID绑定；等比完整显示于立绘窗，保留原色；不含名字／效果文字",
+      "logical_size": [
+        334,
+        250
+      ]
+    }
+  }
+}

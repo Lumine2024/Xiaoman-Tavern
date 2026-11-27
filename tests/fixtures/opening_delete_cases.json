@@ -1,0 +1,33 @@
+{
+  "legacy_path": "user://nov27_legacy.json",
+  "manual_paths": [
+    "user://nov27_slot1.json",
+    "user://nov27_slot2.json",
+    "user://nov27_slot3.json",
+    "user://nov27_slot4.json"
+  ],
+  "auto_paths": [
+    "user://nov27_auto1.json",
+    "user://nov27_auto2.json"
+  ],
+  "profile_path": "user://nov27_profile.json",
+  "modified_money": 777,
+  "rival_id": "duren",
+  "companion_index": 1,
+  "window_sizes": [
+    [
+      1280,
+      800
+    ],
+    [
+      1440,
+      900
+    ]
+  ],
+  "pause_seconds": 0.12,
+  "recipe_id": "M-06",
+  "invalid_metadata": "not an object",
+  "filled_label": "已入杯",
+  "handoff_phrase": "同行的竞争",
+  "wait_seconds": 3.0
+}

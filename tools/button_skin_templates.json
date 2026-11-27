@@ -1,0 +1,36 @@
+{
+  "corner_radius": 7,
+  "border_width": 1,
+  "states": {
+    "normal": {
+      "fill": "25433fff",
+      "border": "567362ff",
+      "draw_center": true
+    },
+    "hover": {
+      "fill": "3f6152ff",
+      "border": "567362ff",
+      "draw_center": true
+    },
+    "pressed": {
+      "fill": "3f6152ff",
+      "border": "567362ff",
+      "draw_center": true
+    },
+    "hover_pressed": {
+      "fill": "3f6152ff",
+      "border": "567362ff",
+      "draw_center": true
+    },
+    "disabled": {
+      "fill": "1d3030ff",
+      "border": "567362ff",
+      "draw_center": true
+    },
+    "focus": {
+      "fill": "00000000",
+      "border": "dcb779ff",
+      "draw_center": false
+    }
+  }
+}

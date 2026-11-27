@@ -1,0 +1,25 @@
+{
+  "save_path": "user://mix_camera_test.json",
+  "methods": [
+    "摇和",
+    "搅拌",
+    "滚摇",
+    "长摇"
+  ],
+  "click_point": [
+    0.82,
+    0.8
+  ],
+  "miss_position": 0.0,
+  "minimum_gain": 2.0,
+  "resize_sizes": [
+    [
+      1280,
+      800
+    ],
+    [
+      960,
+      600
+    ]
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "legacy_path": "user://button_skins_legacy.json",
+  "paths": {
+    "manual_paths": ["user://button_skins_slot1.json", "user://button_skins_slot2.json", "user://button_skins_slot3.json", "user://button_skins_slot4.json"],
+    "auto_paths": ["user://button_skins_auto1.json", "user://button_skins_auto2.json"],
+    "profile_path": "user://button_skins_profile.json"
+  },
+  "states": ["normal", "hover", "pressed", "hover_pressed", "disabled", "focus"],
+  "window_sizes": [[1280, 800], [1440, 900]],
+  "focus_alpha_max": 0.01
+}

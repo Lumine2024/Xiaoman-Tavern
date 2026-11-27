@@ -1,0 +1,32 @@
+{
+  "legacy_path": "user://cowork_revision_legacy.json",
+  "manual_paths": [
+    "user://cowork_revision_slot1.json",
+    "user://cowork_revision_slot2.json",
+    "user://cowork_revision_slot3.json",
+    "user://cowork_revision_slot4.json"
+  ],
+  "auto_paths": [
+    "user://cowork_revision_auto1.json",
+    "user://cowork_revision_auto2.json"
+  ],
+  "profile_path": "user://cowork_revision_profile.json",
+  "modified_money": 777,
+  "rival_id": "duren",
+  "companion_index": 1,
+  "window_sizes": [
+    [
+      1280,
+      800
+    ],
+    [
+      1440,
+      900
+    ]
+  ],
+  "pause_seconds": 0.12,
+  "recipe_id": "M-06",
+  "invalid_metadata": "not an object",
+  "filled_label": "已入杯",
+  "handoff_phrase": "同行的竞争"
+}

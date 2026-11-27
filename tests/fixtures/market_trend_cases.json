@@ -1,0 +1,68 @@
+{
+  "save_path": "user://test_market_trends.json",
+  "trend_bands": [
+    "M",
+    "H"
+  ],
+  "sample_count": 20000,
+  "sample_seed": 20261124,
+  "disclosure_seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "start_day": 1,
+  "trend_recipe": "M-07",
+  "promotion_recipe": "S-01",
+  "second_promotion": "M-01",
+  "normal_recipe": "S-02",
+  "trend_event": "trend_M_07",
+  "baseline_event_ids": [
+    "lemon_shipping",
+    "paid_reviews",
+    "lime_arrival",
+    "tonic_delivery",
+    "late_shift"
+  ],
+  "invalid_weights": [
+    {
+      "normal": 1.0,
+      "trend": 12.0,
+      "promotion": 12.0
+    },
+    {
+      "normal": 4.0,
+      "trend": 1.0,
+      "promotion": 12.0
+    }
+  ],
+  "configured_customers": 6
+}

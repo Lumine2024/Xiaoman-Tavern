@@ -1,0 +1,166 @@
+{
+  "base_patience": 180,
+  "segment_seconds": 20,
+  "default_customer": {
+    "color": "b8c9b8",
+    "initial": "客",
+    "request": "standard",
+    "request_text": "照配方来就好。",
+    "favorite": ""
+  },
+  "legacy_customer_ids": [
+    "露米",
+    "埃德",
+    "诺雅",
+    "塞缪尔",
+    "米娅",
+    "维克"
+  ],
+  "orders": {
+    "船长": {
+      "recipe": "M-01",
+      "amounts": {
+        "威士忌": 120,
+        "糖浆": 20,
+        "苦精": 1
+      }
+    },
+    "埃德": {
+      "recipe": "S-02",
+      "add_amounts": {
+        "苏打水": 20
+      }
+    },
+    "塞缪尔": {
+      "recipe": "M-07",
+      "no_garnish": true,
+      "minimum_tier": 2
+    },
+    "维尔": {
+      "recipe": "M-01",
+      "amounts": {
+        "威士忌": 120,
+        "糖浆": 20,
+        "苦精": 3
+      },
+      "no_ice": true,
+      "no_garnish": true,
+      "minimum_tier": 3
+    },
+    "执事": {
+      "recipe": "S-08",
+      "amounts": {
+        "苏打水": 60
+      },
+      "time_limit": 90
+    },
+    "老布洛克": {
+      "recipe": "S-02",
+      "remove_liquids": [
+        "苏打水"
+      ]
+    },
+    "艾露恩": {
+      "recipe": "M-07",
+      "garnish": [
+        "橙皮"
+      ]
+    }
+  },
+  "default_choice": {
+    "tip": 1.0,
+    "revenue": 1.0,
+    "cost": 0,
+    "seconds": 0,
+    "traffic": 0,
+    "reputation": 0
+  },
+  "cold_choice": {
+    "tip": 0.9,
+    "reputation": 0
+  },
+  "races": {
+    "人类": {
+      "patience_multiplier": 1,
+      "patience_add": 0,
+      "tip": 1,
+      "tolerance": null
+    },
+    "哥布林": {
+      "patience_multiplier": 0.8,
+      "patience_add": 0,
+      "tip": 0.9,
+      "tolerance": 1
+    },
+    "精灵": {
+      "patience_multiplier": 1,
+      "patience_add": 10,
+      "tip": 1.2,
+      "tolerance": 0
+    },
+    "矮人": {
+      "patience_multiplier": 1,
+      "patience_add": -10,
+      "tip": 1.3,
+      "tolerance": 1
+    },
+    "兽人": {
+      "patience_multiplier": 1,
+      "patience_add": 0,
+      "tip": 1.1,
+      "tolerance": 1,
+      "segment_bonus": 5
+    },
+    "半身人": {
+      "patience_multiplier": 1,
+      "patience_add": 15,
+      "tip": 1.1,
+      "tolerance": 2
+    },
+    "龙裔": {
+      "patience_multiplier": 1,
+      "patience_add": -5,
+      "tip": 1.3,
+      "tolerance": 0
+    },
+    "幽魂": {
+      "patience_multiplier": 1,
+      "patience_add": 20,
+      "tip": 1.2,
+      "tolerance": 1,
+      "segment_bonus": -3
+    },
+    "树妖": {
+      "patience_multiplier": 1,
+      "patience_add": 25,
+      "tip": 1,
+      "tolerance": 1
+    },
+    "鱼人": {
+      "patience_multiplier": 1,
+      "patience_add": -15,
+      "tip": 1.1,
+      "tolerance": 1
+    },
+    "猫人": {
+      "patience_multiplier": 1,
+      "patience_add": 0,
+      "tip": 1.2,
+      "tolerance": 1,
+      "random_patience": 10
+    },
+    "妖精": {
+      "patience_multiplier": 1,
+      "patience_add": -25,
+      "tip": 0.8,
+      "tolerance": 1
+    }
+  },
+  "events_source": "res://data/special_events.json",
+  "pending": {
+    "remake_workflow": null,
+    "replacement_ingredient_map": null,
+    "glass_temperature_control": null,
+    "fresh_garnish_control": null
+  }
+}

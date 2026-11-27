@@ -1,0 +1,255 @@
+{
+  "title": "小漫特调",
+  "subtitle": "异世界的夜色，装进一只杯子。",
+  "starting_money": 360,
+  "customers_min": 5,
+  "customers_max": 6,
+  "promotion_guarantee": 3,
+  "rapport_tip_ratio": 0.1,
+  "difficulty_names": {
+    "S": "简单",
+    "M": "中等",
+    "H": "困难"
+  },
+  "order_seconds": 180,
+  "pour_speed": 24.0,
+  "small_measure_seconds": 3.0,
+  "jigger_capacity": 150.0,
+  "mix_cycle_seconds": 3.0,
+  "mix_target": 0.5,
+  "mix_tolerance": {
+    "搅拌": 0.08,
+    "摇和": 0.05,
+    "滚摇": 0.03,
+    "长摇": 0.03
+  },
+  "perfect_tolerance": 0.02,
+  "long_mix_multiplier": 2.0,
+  "quantity_tolerance": 0.08,
+  "perfect_quantity_tolerance": 0.02,
+  "initial_stock": 600.0,
+  "stock_pack": 500.0,
+  "equipment_price": 160,
+  "equipment_time_bonus": 20,
+  "spoilage_ratio": 0.2,
+  "mistake_penalty": 0.12,
+  "minimum_payout_ratio": 0.2,
+  "save_path": "user://tavern_save.json",
+  "log_path": "user://game.log",
+  "base_names": [
+    "威士忌",
+    "金酒",
+    "白朗姆",
+    "陈年朗姆",
+    "高酯朗姆",
+    "龙舌兰",
+    "伏特加",
+    "干邑"
+  ],
+  "base_families": {
+    "威士忌": "威士忌",
+    "金酒": "金酒",
+    "白朗姆": "朗姆",
+    "陈年朗姆": "朗姆",
+    "高酯朗姆": "朗姆",
+    "龙舌兰": "龙舌兰",
+    "伏特加": "伏特加",
+    "干邑": "干邑"
+  },
+  "base_tiers": {
+    "威士忌": [
+      {
+        "name": "巷口调和",
+        "pack_price": 60,
+        "unlock_fee": 0
+      },
+      {
+        "name": "高地单一麦芽",
+        "pack_price": 95,
+        "unlock_fee": 95
+      },
+      {
+        "name": "桶强雪莉单桶",
+        "pack_price": 150,
+        "unlock_fee": 150
+      }
+    ],
+    "金酒": [
+      {
+        "name": "平价伦敦干",
+        "pack_price": 60,
+        "unlock_fee": 0
+      },
+      {
+        "name": "手工植物金",
+        "pack_price": 95,
+        "unlock_fee": 95
+      },
+      {
+        "name": "过桶老汤姆",
+        "pack_price": 150,
+        "unlock_fee": 150
+      }
+    ],
+    "朗姆": [
+      {
+        "name": "白朗姆",
+        "pack_price": 55,
+        "unlock_fee": 0
+      },
+      {
+        "name": "陈年朗姆",
+        "pack_price": 90,
+        "unlock_fee": 90
+      },
+      {
+        "name": "高酯牙买加",
+        "pack_price": 145,
+        "unlock_fee": 145
+      }
+    ],
+    "龙舌兰": [
+      {
+        "name": "银龙舌兰",
+        "pack_price": 65,
+        "unlock_fee": 0
+      },
+      {
+        "name": "微陈 Reposado",
+        "pack_price": 100,
+        "unlock_fee": 100
+      },
+      {
+        "name": "陈年 Añejo",
+        "pack_price": 155,
+        "unlock_fee": 155
+      }
+    ],
+    "伏特加": [
+      {
+        "name": "谷物伏特加",
+        "pack_price": 50,
+        "unlock_fee": 0
+      },
+      {
+        "name": "小麦伏特加",
+        "pack_price": 85,
+        "unlock_fee": 85
+      },
+      {
+        "name": "小批次单蒸",
+        "pack_price": 135,
+        "unlock_fee": 135
+      }
+    ],
+    "干邑": [
+      {
+        "name": "VS",
+        "pack_price": 80,
+        "unlock_fee": 0
+      },
+      {
+        "name": "VSOP",
+        "pack_price": 120,
+        "unlock_fee": 120
+      },
+      {
+        "name": "XO",
+        "pack_price": 190,
+        "unlock_fee": 190
+      }
+    ]
+  },
+  "cups": [
+    "高球杯",
+    "古典杯",
+    "鸡尾酒杯",
+    "马天尼杯",
+    "玛格丽特杯",
+    "葡萄酒杯",
+    "铜杯"
+  ],
+  "ice": [
+    "大冰",
+    "碎冰",
+    "无冰"
+  ],
+  "garnishes": [
+    "青柠角",
+    "柠檬角",
+    "柠檬皮",
+    "橙皮",
+    "橙片",
+    "樱桃",
+    "薄荷",
+    "菠萝叶",
+    "菠萝片",
+    "橄榄",
+    "芹菜",
+    "咖啡豆",
+    "盐边",
+    "黑胡椒",
+    "覆盆子",
+    "青柠皮"
+  ],
+  "steps": [
+    "基酒量取",
+    "辅料量取",
+    "调和判定",
+    "杯具与冰",
+    "特殊处理",
+    "装饰出品"
+  ],
+  "companions": [
+    {
+      "id": "judge",
+      "name": "法官",
+      "title": "契约的天平",
+      "description": "按时完成酒水与三轮对话，收益 ×1.3；否则收益 ×0.7。",
+      "time_multiplier": 1.0,
+      "success_multiplier": 1.3,
+      "failure_multiplier": 0.7
+    },
+    {
+      "id": "pope",
+      "name": "教皇",
+      "title": "慢一拍的祝福",
+      "description": "每位顾客的耐心时间增加 40%，从容照料每一杯。",
+      "time_multiplier": 1.4,
+      "success_multiplier": 1.0,
+      "failure_multiplier": 1.0
+    },
+    {
+      "id": "merchant",
+      "name": "商人",
+      "title": "熟门熟路",
+      "description": "原料采购费减少25%，基酒与器材升级费减少15%。事件、情报及还债不打折。",
+      "time_multiplier": 1.0,
+      "success_multiplier": 1.0,
+      "failure_multiplier": 1.0
+    },
+    {
+      "id": "banker",
+      "name": "银行家",
+      "title": "留有余地",
+      "description": "每天完成至少3单有效订单，扣除债务后的现金计息3%；本金至多2000金，每日利息至多60金。",
+      "time_multiplier": 1.0,
+      "success_multiplier": 1.0,
+      "failure_multiplier": 1.0
+    },
+    {
+      "id": "patron",
+      "name": "富豪",
+      "title": "先把店开起来",
+      "description": "每位新对手首次竞争追加600金投资。同一对手的重试与重赛不重复领取。",
+      "time_multiplier": 1.0,
+      "success_multiplier": 1.0,
+      "failure_multiplier": 1.0
+    }
+  ],
+  "favorite_tier_bonus": 0.15,
+  "opening_stock": {
+    "base_ml": 600.0,
+    "auxiliary_ml": 0.0
+  }
+}

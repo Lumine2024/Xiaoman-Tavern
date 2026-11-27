@@ -1,0 +1,19 @@
+{
+  "save_path": "user://journal_ice_test.json",
+  "rival": "karn",
+  "recipe": "S-01",
+  "customer_index": 0,
+  "notes": ["码头那批柠檬明天才到，今晚先盘点一下吧。", "昨天路过巷口，看见一只猫守着空箱子。", "有人说汤力水快降价了，我还没问过货商。", "他最近一直来这儿，坐下之后却很少说话。", "明天若有空，我还坐靠窗那个位子。", "别忘了替老朋友留一盏灯。"],
+  "query": "柠檬",
+  "legacy_prefixes": ["闲聊：", "消息："],
+  "message_samples": {"event": "下一船柠檬要晚一天，明天的货价可能要动了。", "smalltalk": "巷口有人也这么说，你自己再打听打听。"},
+  "many_note": "来客留下的第{index}条话：夜里的灯还亮着。",
+  "many_count": 95,
+  "mid_order_spend": 1,
+  "windows": [[1280, 800], [1440, 900]],
+  "ice_types": ["大冰", "碎冰"],
+  "no_ice": "无冰",
+  "gallery_columns": 7,
+  "gallery_drink_size": [185, 280],
+  "geometry_epsilon": 0.01
+}

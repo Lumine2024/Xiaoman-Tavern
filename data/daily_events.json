@@ -1,0 +1,1266 @@
+{
+  "disclosure_probability": 0.5,
+  "events": {
+    "lemon_shipping": {
+      "customer_ids": [
+        "船长"
+      ],
+      "kind": "price",
+      "ingredient": "柠檬汁",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "action": null,
+      "traffic_delta": -1,
+      "conflict_group": "price:柠檬汁",
+      "delay_days": 1
+    },
+    "paid_reviews": {
+      "customer_ids": [
+        "塞缪尔"
+      ],
+      "kind": "traffic",
+      "delay_days": 2,
+      "traffic_delta": -2,
+      "duration_days": 4,
+      "action": {
+        "cost": 60
+      },
+      "conflict_group": "reviews",
+      "discount_margin_loss": 0.15
+    },
+    "lime_arrival": {
+      "customer_ids": [
+        "诺雅"
+      ],
+      "kind": "price",
+      "ingredient": "青柠汁",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:青柠汁",
+      "action": null,
+      "delay_days": 1
+    },
+    "tonic_delivery": {
+      "customer_ids": [
+        "咕奇"
+      ],
+      "kind": "price",
+      "ingredient": "汤力水",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:汤力水",
+      "action": null,
+      "delay_days": 1
+    },
+    "late_shift": {
+      "customer_ids": [
+        "埃德"
+      ],
+      "kind": "traffic",
+      "delay_days": 0,
+      "traffic_delta": 1,
+      "duration_days": 1,
+      "conflict_group": "night_shift",
+      "action": null
+    },
+    "price_up_001": {
+      "customer_ids": [
+        "船长"
+      ],
+      "kind": "price",
+      "ingredient": "威士忌",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:威士忌",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_001": {
+      "customer_ids": [
+        "船长"
+      ],
+      "kind": "price",
+      "ingredient": "威士忌",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:威士忌",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_002": {
+      "customer_ids": [
+        "诺雅"
+      ],
+      "kind": "price",
+      "ingredient": "金酒",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:金酒",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_002": {
+      "customer_ids": [
+        "诺雅"
+      ],
+      "kind": "price",
+      "ingredient": "金酒",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:金酒",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_003": {
+      "customer_ids": [
+        "船长"
+      ],
+      "kind": "price",
+      "ingredient": "白朗姆",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:白朗姆",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_003": {
+      "customer_ids": [
+        "船长"
+      ],
+      "kind": "price",
+      "ingredient": "白朗姆",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:白朗姆",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_004": {
+      "customer_ids": [
+        "船长"
+      ],
+      "kind": "price",
+      "ingredient": "陈年朗姆",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:陈年朗姆",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_004": {
+      "customer_ids": [
+        "船长"
+      ],
+      "kind": "price",
+      "ingredient": "陈年朗姆",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:陈年朗姆",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_005": {
+      "customer_ids": [
+        "诺雅"
+      ],
+      "kind": "price",
+      "ingredient": "高酯朗姆",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:高酯朗姆",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_005": {
+      "customer_ids": [
+        "诺雅"
+      ],
+      "kind": "price",
+      "ingredient": "高酯朗姆",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:高酯朗姆",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_006": {
+      "customer_ids": [
+        "老布洛克"
+      ],
+      "kind": "price",
+      "ingredient": "龙舌兰",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:龙舌兰",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_006": {
+      "customer_ids": [
+        "老布洛克"
+      ],
+      "kind": "price",
+      "ingredient": "龙舌兰",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:龙舌兰",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_007": {
+      "customer_ids": [
+        "埃德"
+      ],
+      "kind": "price",
+      "ingredient": "伏特加",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:伏特加",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_007": {
+      "customer_ids": [
+        "埃德"
+      ],
+      "kind": "price",
+      "ingredient": "伏特加",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:伏特加",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_008": {
+      "customer_ids": [
+        "维尔"
+      ],
+      "kind": "price",
+      "ingredient": "干邑",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:干邑",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_008": {
+      "customer_ids": [
+        "维尔"
+      ],
+      "kind": "price",
+      "ingredient": "干邑",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:干邑",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_009": {
+      "customer_ids": [
+        "塞缪尔"
+      ],
+      "kind": "price",
+      "ingredient": "甜味美思",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:甜味美思",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_009": {
+      "customer_ids": [
+        "塞缪尔"
+      ],
+      "kind": "price",
+      "ingredient": "甜味美思",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:甜味美思",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_010": {
+      "customer_ids": [
+        "维尔"
+      ],
+      "kind": "price",
+      "ingredient": "干味美思",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:干味美思",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_010": {
+      "customer_ids": [
+        "维尔"
+      ],
+      "kind": "price",
+      "ingredient": "干味美思",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:干味美思",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_011": {
+      "customer_ids": [
+        "诺雅"
+      ],
+      "kind": "price",
+      "ingredient": "金巴利",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:金巴利",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_011": {
+      "customer_ids": [
+        "诺雅"
+      ],
+      "kind": "price",
+      "ingredient": "金巴利",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:金巴利",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_012": {
+      "customer_ids": [
+        "米娅"
+      ],
+      "kind": "price",
+      "ingredient": "阿佩罗",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:阿佩罗",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_012": {
+      "customer_ids": [
+        "米娅"
+      ],
+      "kind": "price",
+      "ingredient": "阿佩罗",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:阿佩罗",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_013": {
+      "customer_ids": [
+        "艾露恩"
+      ],
+      "kind": "price",
+      "ingredient": "橙皮利口",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:橙皮利口",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_013": {
+      "customer_ids": [
+        "艾露恩"
+      ],
+      "kind": "price",
+      "ingredient": "橙皮利口",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:橙皮利口",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_014": {
+      "customer_ids": [
+        "诺雅"
+      ],
+      "kind": "price",
+      "ingredient": "樱桃利口",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:樱桃利口",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_014": {
+      "customer_ids": [
+        "诺雅"
+      ],
+      "kind": "price",
+      "ingredient": "樱桃利口",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:樱桃利口",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_015": {
+      "customer_ids": [
+        "奥兰"
+      ],
+      "kind": "price",
+      "ingredient": "草本利口",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:草本利口",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_015": {
+      "customer_ids": [
+        "奥兰"
+      ],
+      "kind": "price",
+      "ingredient": "草本利口",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:草本利口",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_016": {
+      "customer_ids": [
+        "卡莱尔"
+      ],
+      "kind": "price",
+      "ingredient": "咖啡利口",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:咖啡利口",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_016": {
+      "customer_ids": [
+        "卡莱尔"
+      ],
+      "kind": "price",
+      "ingredient": "咖啡利口",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:咖啡利口",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_017": {
+      "customer_ids": [
+        "维尔"
+      ],
+      "kind": "price",
+      "ingredient": "杏仁利口",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:杏仁利口",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_017": {
+      "customer_ids": [
+        "维尔"
+      ],
+      "kind": "price",
+      "ingredient": "杏仁利口",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:杏仁利口",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_018": {
+      "customer_ids": [
+        "咕奇"
+      ],
+      "kind": "price",
+      "ingredient": "糖浆",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:糖浆",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_018": {
+      "customer_ids": [
+        "咕奇"
+      ],
+      "kind": "price",
+      "ingredient": "糖浆",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:糖浆",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_019": {
+      "customer_ids": [
+        "艾露恩"
+      ],
+      "kind": "price",
+      "ingredient": "蜂蜜糖浆",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:蜂蜜糖浆",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_019": {
+      "customer_ids": [
+        "艾露恩"
+      ],
+      "kind": "price",
+      "ingredient": "蜂蜜糖浆",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:蜂蜜糖浆",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_020": {
+      "customer_ids": [
+        "米娅"
+      ],
+      "kind": "price",
+      "ingredient": "红石榴糖浆",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:红石榴糖浆",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_020": {
+      "customer_ids": [
+        "米娅"
+      ],
+      "kind": "price",
+      "ingredient": "红石榴糖浆",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:红石榴糖浆",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_021": {
+      "customer_ids": [
+        "艾露恩"
+      ],
+      "kind": "price",
+      "ingredient": "覆盆子糖浆",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:覆盆子糖浆",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_021": {
+      "customer_ids": [
+        "艾露恩"
+      ],
+      "kind": "price",
+      "ingredient": "覆盆子糖浆",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:覆盆子糖浆",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_022": {
+      "customer_ids": [
+        "塞缪尔"
+      ],
+      "kind": "price",
+      "ingredient": "苦精",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:苦精",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_022": {
+      "customer_ids": [
+        "塞缪尔"
+      ],
+      "kind": "price",
+      "ingredient": "苦精",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:苦精",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_023": {
+      "customer_ids": [
+        "船长"
+      ],
+      "kind": "price",
+      "ingredient": "柠檬汁",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:柠檬汁",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_024": {
+      "customer_ids": [
+        "诺雅"
+      ],
+      "kind": "price",
+      "ingredient": "青柠汁",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:青柠汁",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_025": {
+      "customer_ids": [
+        "露米"
+      ],
+      "kind": "price",
+      "ingredient": "橙汁",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:橙汁",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_025": {
+      "customer_ids": [
+        "露米"
+      ],
+      "kind": "price",
+      "ingredient": "橙汁",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:橙汁",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_026": {
+      "customer_ids": [
+        "米娅"
+      ],
+      "kind": "price",
+      "ingredient": "蔓越莓汁",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:蔓越莓汁",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_026": {
+      "customer_ids": [
+        "米娅"
+      ],
+      "kind": "price",
+      "ingredient": "蔓越莓汁",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:蔓越莓汁",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_027": {
+      "customer_ids": [
+        "船长"
+      ],
+      "kind": "price",
+      "ingredient": "菠萝汁",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:菠萝汁",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_027": {
+      "customer_ids": [
+        "船长"
+      ],
+      "kind": "price",
+      "ingredient": "菠萝汁",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:菠萝汁",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_028": {
+      "customer_ids": [
+        "老布洛克"
+      ],
+      "kind": "price",
+      "ingredient": "番茄汁",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:番茄汁",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_028": {
+      "customer_ids": [
+        "老布洛克"
+      ],
+      "kind": "price",
+      "ingredient": "番茄汁",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:番茄汁",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_029": {
+      "customer_ids": [
+        "埃德"
+      ],
+      "kind": "price",
+      "ingredient": "苏打水",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:苏打水",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_029": {
+      "customer_ids": [
+        "埃德"
+      ],
+      "kind": "price",
+      "ingredient": "苏打水",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:苏打水",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_030": {
+      "customer_ids": [
+        "咕奇"
+      ],
+      "kind": "price",
+      "ingredient": "可乐",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:可乐",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_030": {
+      "customer_ids": [
+        "咕奇"
+      ],
+      "kind": "price",
+      "ingredient": "可乐",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:可乐",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_031": {
+      "customer_ids": [
+        "老布洛克"
+      ],
+      "kind": "price",
+      "ingredient": "姜汁啤酒",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:姜汁啤酒",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_031": {
+      "customer_ids": [
+        "老布洛克"
+      ],
+      "kind": "price",
+      "ingredient": "姜汁啤酒",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:姜汁啤酒",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_032": {
+      "customer_ids": [
+        "咕奇"
+      ],
+      "kind": "price",
+      "ingredient": "汤力水",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:汤力水",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_033": {
+      "customer_ids": [
+        "艾露恩"
+      ],
+      "kind": "price",
+      "ingredient": "淡奶油",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:淡奶油",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_033": {
+      "customer_ids": [
+        "艾露恩"
+      ],
+      "kind": "price",
+      "ingredient": "淡奶油",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:淡奶油",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_034": {
+      "customer_ids": [
+        "露米"
+      ],
+      "kind": "price",
+      "ingredient": "蛋白",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:蛋白",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_034": {
+      "customer_ids": [
+        "露米"
+      ],
+      "kind": "price",
+      "ingredient": "蛋白",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:蛋白",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_035": {
+      "customer_ids": [
+        "维克"
+      ],
+      "kind": "price",
+      "ingredient": "伍斯特酱",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:伍斯特酱",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_035": {
+      "customer_ids": [
+        "维克"
+      ],
+      "kind": "price",
+      "ingredient": "伍斯特酱",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:伍斯特酱",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_036": {
+      "customer_ids": [
+        "老布洛克"
+      ],
+      "kind": "price",
+      "ingredient": "辣酱",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:辣酱",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_036": {
+      "customer_ids": [
+        "老布洛克"
+      ],
+      "kind": "price",
+      "ingredient": "辣酱",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:辣酱",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_up_037": {
+      "customer_ids": [
+        "卡莱尔"
+      ],
+      "kind": "price",
+      "ingredient": "浓缩咖啡",
+      "multiplier": 1.2,
+      "duration_days": 3,
+      "traffic_delta": -1,
+      "conflict_group": "price:浓缩咖啡",
+      "action": null,
+      "delay_days": 1
+    },
+    "price_down_037": {
+      "customer_ids": [
+        "卡莱尔"
+      ],
+      "kind": "price",
+      "ingredient": "浓缩咖啡",
+      "multiplier": 0.9,
+      "duration_days": 2,
+      "traffic_delta": 0,
+      "conflict_group": "price:浓缩咖啡",
+      "action": null,
+      "delay_days": 1
+    },
+    "trend_M_01": {
+      "customer_ids": [
+        "*"
+      ],
+      "kind": "trend",
+      "recipe_id": "M-01",
+      "duration_days": 3,
+      "traffic_delta": 0,
+      "conflict_group": "trend:M-01",
+      "action": null
+    },
+    "trend_M_02": {
+      "customer_ids": [
+        "*"
+      ],
+      "kind": "trend",
+      "recipe_id": "M-02",
+      "duration_days": 3,
+      "traffic_delta": 0,
+      "conflict_group": "trend:M-02",
+      "action": null
+    },
+    "trend_M_03": {
+      "customer_ids": [
+        "*"
+      ],
+      "kind": "trend",
+      "recipe_id": "M-03",
+      "duration_days": 3,
+      "traffic_delta": 0,
+      "conflict_group": "trend:M-03",
+      "action": null
+    },
+    "trend_M_04": {
+      "customer_ids": [
+        "*"
+      ],
+      "kind": "trend",
+      "recipe_id": "M-04",
+      "duration_days": 3,
+      "traffic_delta": 0,
+      "conflict_group": "trend:M-04",
+      "action": null
+    },
+    "trend_M_05": {
+      "customer_ids": [
+        "*"
+      ],
+      "kind": "trend",
+      "recipe_id": "M-05",
+      "duration_days": 3,
+      "traffic_delta": 0,
+      "conflict_group": "trend:M-05",
+      "action": null
+    },
+    "trend_M_06": {
+      "customer_ids": [
+        "*"
+      ],
+      "kind": "trend",
+      "recipe_id": "M-06",
+      "duration_days": 3,
+      "traffic_delta": 0,
+      "conflict_group": "trend:M-06",
+      "action": null
+    },
+    "trend_M_07": {
+      "customer_ids": [
+        "*"
+      ],
+      "kind": "trend",
+      "recipe_id": "M-07",
+      "duration_days": 3,
+      "traffic_delta": 0,
+      "conflict_group": "trend:M-07",
+      "action": null
+    },
+    "trend_M_08": {
+      "customer_ids": [
+        "*"
+      ],
+      "kind": "trend",
+      "recipe_id": "M-08",
+      "duration_days": 3,
+      "traffic_delta": 0,
+      "conflict_group": "trend:M-08",
+      "action": null
+    },
+    "trend_M_09": {
+      "customer_ids": [
+        "*"
+      ],
+      "kind": "trend",
+      "recipe_id": "M-09",
+      "duration_days": 3,
+      "traffic_delta": 0,
+      "conflict_group": "trend:M-09",
+      "action": null
+    },
+    "trend_M_10": {
+      "customer_ids": [
+        "*"
+      ],
+      "kind": "trend",
+      "recipe_id": "M-10",
+      "duration_days": 3,
+      "traffic_delta": 0,
+      "conflict_group": "trend:M-10",
+      "action": null
+    },
+    "trend_M_11": {
+      "customer_ids": [
+        "*"
+      ],
+      "kind": "trend",
+      "recipe_id": "M-11",
+      "duration_days": 3,
+      "traffic_delta": 0,
+      "conflict_group": "trend:M-11",
+      "action": null
+    },
+    "trend_M_12": {
+      "customer_ids": [
+        "*"
+      ],
+      "kind": "trend",
+      "recipe_id": "M-12",
+      "duration_days": 3,
+      "traffic_delta": 0,
+      "conflict_group": "trend:M-12",
+      "action": null
+    },
+    "trend_H_01": {
+      "customer_ids": [
+        "*"
+      ],
+      "kind": "trend",
+      "recipe_id": "H-01",
+      "duration_days": 3,
+      "traffic_delta": 0,
+      "conflict_group": "trend:H-01",
+      "action": null
+    },
+    "trend_H_02": {
+      "customer_ids": [
+        "*"
+      ],
+      "kind": "trend",
+      "recipe_id": "H-02",
+      "duration_days": 3,
+      "traffic_delta": 0,
+      "conflict_group": "trend:H-02",
+      "action": null
+    },
+    "trend_H_03": {
+      "customer_ids": [
+        "*"
+      ],
+      "kind": "trend",
+      "recipe_id": "H-03",
+      "duration_days": 3,
+      "traffic_delta": 0,
+      "conflict_group": "trend:H-03",
+      "action": null
+    },
+    "trend_H_04": {
+      "customer_ids": [
+        "*"
+      ],
+      "kind": "trend",
+      "recipe_id": "H-04",
+      "duration_days": 3,
+      "traffic_delta": 0,
+      "conflict_group": "trend:H-04",
+      "action": null
+    },
+    "trend_H_05": {
+      "customer_ids": [
+        "*"
+      ],
+      "kind": "trend",
+      "recipe_id": "H-05",
+      "duration_days": 3,
+      "traffic_delta": 0,
+      "conflict_group": "trend:H-05",
+      "action": null
+    },
+    "trend_H_06": {
+      "customer_ids": [
+        "*"
+      ],
+      "kind": "trend",
+      "recipe_id": "H-06",
+      "duration_days": 3,
+      "traffic_delta": 0,
+      "conflict_group": "trend:H-06",
+      "action": null
+    },
+    "trend_H_07": {
+      "customer_ids": [
+        "*"
+      ],
+      "kind": "trend",
+      "recipe_id": "H-07",
+      "duration_days": 3,
+      "traffic_delta": 0,
+      "conflict_group": "trend:H-07",
+      "action": null
+    },
+    "trend_H_08": {
+      "customer_ids": [
+        "*"
+      ],
+      "kind": "trend",
+      "recipe_id": "H-08",
+      "duration_days": 3,
+      "traffic_delta": 0,
+      "conflict_group": "trend:H-08",
+      "action": null
+    },
+    "trend_H_09": {
+      "customer_ids": [
+        "*"
+      ],
+      "kind": "trend",
+      "recipe_id": "H-09",
+      "duration_days": 3,
+      "traffic_delta": 0,
+      "conflict_group": "trend:H-09",
+      "action": null
+    },
+    "trend_H_10": {
+      "customer_ids": [
+        "*"
+      ],
+      "kind": "trend",
+      "recipe_id": "H-10",
+      "duration_days": 3,
+      "traffic_delta": 0,
+      "conflict_group": "trend:H-10",
+      "action": null
+    }
+  },
+  "daily_count": 5,
+  "provisional": {
+    "note": "2026-11-24：按用户授权临时设计事件与数值，待数值策划替换。",
+    "fields": [
+      "lemon_shipping.traffic_delta",
+      "paid_reviews.action",
+      "lime_arrival",
+      "tonic_delivery",
+      "late_shift",
+      "repeat_cooldown_days",
+      "新增原料涨价：1.2倍／3晚／主推失客1",
+      "新增原料降价：0.9倍／2晚",
+      "潮流持续3晚",
+      "order_weights：普通1、潮流4、主推12"
+    ]
+  },
+  "claims": {
+    "lemon_rise": {
+      "verify_customer_id": "船长",
+      "ingredient": "柠檬汁"
+    }
+  },
+  "repeat_cooldown_days": 3,
+  "order_weights": {
+    "normal": 1.0,
+    "trend": 4.0,
+    "promotion": 12.0
+  },
+  "trend_bands": [
+    "M",
+    "H"
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "title": {
+    "name": "小漫特调",
+    "start": "开始游戏",
+    "continue": "继续游戏",
+    "settings": "设置",
+    "quit": "退出游戏"
+  },
+  "menu": {
+    "layer": 100,
+    "heading": "暂歇片刻",
+    "resume": "继续同行",
+    "save": "存档 Save",
+    "load": "加载 Load",
+    "settings": "设置",
+    "title": "保存并返回标题",
+    "quit": "保存并退出游戏",
+    "checkpoint": "接待中读取存档会从本位顾客开头重做，库存恢复至该单开始时。",
+    "saved": "进度已保存。",
+    "settings_path": "user://interface_settings.cfg",
+    "fullscreen": "全屏显示",
+    "reduced_motion": "减少动画（镜头／选人／器具）",
+    "back": "返回",
+    "settings_error": "设置保存失败，本次会话仍然生效。",
+    "hint": "菜单 Esc",
+    "journal": "手账 Tab"
+  },
+  "shop": {
+    "background": "res://assets/ui/shop_placeholder.png",
+    "page_size": 6,
+    "columns": 3,
+    "previous": "上一页",
+    "next": "下一页",
+    "upgrades": "酒窖与器材",
+    "finish": "结束第一周目，开启新的同行 →",
+    "explore": "第一天结束了。接下来你将面对同行的竞争，也会找到愿意与你同行的人。先自在看看货架和账本，准备好后，再开启下一段同行。",
+    "price_highlight": {
+      "font_size": 26,
+      "original_font_size": 18,
+      "up_color": "#FF6B6B",
+      "down_color": "#52D982",
+      "up_arrow": "↑",
+      "down_arrow": "↓",
+      "description": "今日行情：原价 ¥{before} → 现价 ¥{current}（每包，按当前等级与采购条件比较）"
+    },
+    "layout": {
+      "sidebar_left": 0.02,
+      "sidebar_right": 0.3,
+      "catalog_left": 0.32,
+      "catalog_right": 0.98,
+      "top": 0.03,
+      "bottom": 0.98
+    }
+  },
+  "journal": {
+    "heading": "同行手账",
+    "companion": "同行者效果",
+    "rival": "同行竞争效果",
+    "records": "经营与记录",
+    "close": "返回游戏（Tab / Esc）",
+    "none": "暂无记录",
+    "pending": "尚未生效",
+    "active": "生效中",
+    "default_section": "companion",
+    "sections": {
+      "companion": "同行者",
+      "rival": "对手",
+      "records": "经营记录",
+      "market": "采购与市场",
+      "messages": "消息"
+    },
+    "panel_width": 1100,
+    "body_height": 440,
+    "page_size": 30,
+    "search": "搜索说话人或记录内容…",
+    "speaker": "说话人：{names}",
+    "unknown_speaker": "说话人未记录",
+    "speaker_separator": "、",
+    "favorites_only": "只看收藏",
+    "select_all": "全选筛选结果",
+    "select_none": "取消选择",
+    "favorite": "☆ 收藏",
+    "favorited": "★ 已收藏",
+    "favorite_selected": "收藏所选",
+    "unfavorite_selected": "取消收藏",
+    "delete_selected": "删除所选",
+    "clean": "清理未收藏",
+    "clean_hint": "仅删除当前筛选结果中未收藏的记录，可撤销本次删除。",
+    "undo": "撤销删除",
+    "count": "共{total}条 · 筛选{filtered}条 · 已选{selected}条",
+    "empty_search": "没有符合筛选条件的记录",
+    "deleted": "已删除{count}条，可撤销本次删除。",
+    "restored": "已恢复{count}条记录。",
+    "saved": "已保存整理结果。",
+    "save_failed": "整理结果暂未保存，请检查存档提示。",
+    "previous": "上一页",
+    "next": "下一页",
+    "page": "第{page}／{pages}页"
+  },
+  "slots": {
+    "manual_paths": [
+      "user://tavern_slot_1.json",
+      "user://tavern_slot_2.json",
+      "user://tavern_slot_3.json",
+      "user://tavern_slot_4.json"
+    ],
+    "auto_paths": [
+      "user://tavern_auto_1.json",
+      "user://tavern_auto_2.json"
+    ],
+    "profile_path": "user://tavern_profile.json",
+    "heading_new": "开始新游戏 · 选择独立存档栏位",
+    "heading_save": "保存至栏位",
+    "heading_load": "加载存档",
+    "empty": "空栏位",
+    "invalid": "存档损坏，无法读取",
+    "overwrite": "此操作将替换所选栏位的进度；其他栏位不变。是否继续？",
+    "slot": "存档 %d",
+    "auto": "自动存档 %d",
+    "time_unknown": "未记录时间",
+    "new": "新游戏",
+    "back": "返回",
+    "profile_error": "共享教程记录不可用，请先恢复其备份，未创建新游戏。",
+    "phases": {
+      "promotion": "准备挂牌",
+      "selection": "抽签与选择同行",
+      "reception": "接待中",
+      "shop": "打烊采购",
+      "preparation": "D0开业采购"
+    },
+    "delete": "删除",
+    "delete_title": "删除存档",
+    "delete_confirm": "删除「{slot}」及其备份？此操作无法撤销。其他栏位与教程完成记录会保留。",
+    "deleted": "所选存档及备份已删除。",
+    "delete_error": "删除失败，部分文件可能仍然存在，请重试。",
+    "delete_active": "当前使用中的栏位请返回标题后再删除。"
+  },
+  "theme": {
+    "font": "#FFF5E0",
+    "muted": "#CCDDD4",
+    "disabled": "#A3B8B1",
+    "outline": "#071619",
+    "outline_size": 2
+  },
+  "effect_templates": {
+    "karn": [
+      "简单酒跟价上限 ¥{competitor_initial_quote}；守价超上限时客流 {over_cap_traffic_delta}。"
+    ],
+    "bella": [
+      "经典款收益 ×{classic_revenue_multiplier}；连续主推达到 {copy_offer_start_streak_day} 日时，同款收益 ×{copied_promotion_revenue_multiplier}，折扣不重复相乘。",
+      "应季水果断货概率增量 {outage_delta_pp} 个百分点。"
+    ],
+    "marta": [
+      "主推碎冰冷饮时客流 {cold_promotion_traffic_delta}；采购无折扣。",
+      "断货概率增量 {outage_delta_pp} 个百分点；热饮与熟客名单未提供，对应条件暂未启用。"
+    ],
+    "duren": [
+      "辅料普通采购 ×{procurement_multiplier}；应急采购 ×{emergency_procurement_multiplier}。",
+      "专项赊购额度 {credit_advance}，延后 {credit_payment_delay_days} 日还款；按已开通服务使用。"
+    ],
+    "viola": [
+      "困难款要求基酒至少目录等级 {min_base_tier}；错杯收益 ×{wrong_cup_revenue_multiplier}，低等级 ×{low_tier_revenue_multiplier}，同时不合规只取较严项。",
+      "合规小费 ×{compliant_tip_multiplier}；经典款收益 ×{classic_revenue_multiplier}。",
+      "目录等级 {procurement_min_base_tier} 起的基酒采购 ×{procurement_multiplier}。"
+    ],
+    "olga": [
+      "市场预报提前 {forecast_days_ahead} 日；普通准确概率 {forecast_reliability}，结盟后 {allied_forecast_reliability}。",
+      "锁价服务 ¥{lock_service_fee_override}，每日最多 {lock_max_per_day} 次，仅锁定选定的次日采购包数。"
+    ]
+  },
+  "result": {
+    "no_drink": "本杯尚未倒入酒杯",
+    "details": "本杯记录",
+    "mistakes": {
+      "heading": "本次计入的失误",
+      "none": "本次没有计入失误。",
+      "item": "{reason}（+{count}次）",
+      "notes_heading": "其他结算说明（不计失误）",
+      "mixed_liquids": "量取{target_name}时切换了原料：{previous} → {actual_name}。",
+      "transfer": "量取不符：要求{target_name} {target}mL，实际{actual_name}约{amount}mL；允许误差±{tolerance}%。",
+      "transfer_optional": "量取不符：要求{target_name} {target}mL（未调整的{optional}mL也可），实际{actual_name}约{amount}mL；允许误差±{tolerance}%。",
+      "mix": "{method}判定未落入允许区间：偏差约{deviation}%，允许±{tolerance}%。",
+      "pre_solid": "调和前漏加{ingredient}。",
+      "cup": "选杯时使用了{actual}，本杯要求{expected}。",
+      "topup": "后注原料不符：要求{expected}，实际使用{actual}。",
+      "special_skipped": "未确认／满足本杯要求；当时冰型为{actual}，要求{expected}。",
+      "ice": "冰型不符：要求{expected}，实际为{actual}。",
+      "garnish_extra": "添加了本杯不需要的装饰：{ingredient}。",
+      "garnish_missing": "缺少要求的装饰：{ingredient}。",
+      "tier": "基酒等级未满足要求：{details}。",
+      "tier_item": "{family}为{actual}级，需{expected}级",
+      "dialogue": "第{segment}轮交谈未完成。",
+      "untracked": "制作过程另有已记录的失误。",
+      "cup_excluded": "一次错杯已按对手的收益规则处理，未重复计入失误次数。",
+      "tier_excluded": "基酒等级已按对手的收益规则处理，未重复计入失误次数。",
+      "timeout": "本杯超时未完成，没有酒水收入；超时本身不额外增加失误次数。",
+      "abandoned": "本杯已放弃，没有酒水收入；放弃本身不额外增加失误次数。",
+      "incomplete": "本杯尚未完成，没有酒水收入。"
+    }
+  },
+  "opening": {
+    "next": "继续听",
+    "finish": "接过钥匙",
+    "back": "返回标题",
+    "read_ready": "我读完了，开始量取",
+    "text_width": 760,
+    "font_size": 25
+  }
+}

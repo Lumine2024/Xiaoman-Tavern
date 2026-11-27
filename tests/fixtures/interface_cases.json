@@ -1,0 +1,9 @@
+{
+  "save_path": "user://interface_revision_test.json",
+  "settings_path": "user://interface_revision_settings.cfg",
+  "blocked_save_path": "user://interface_revision_missing_dir/save.json",
+  "window_sizes": [[1280, 800], [1440, 900]],
+  "pause_seconds": 0.15,
+  "partial_pour_seconds": 0.2,
+  "shop_page_count": 6
+}

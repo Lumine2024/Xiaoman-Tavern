@@ -1,0 +1,24 @@
+{
+  "save_path": "user://cards_presentation_test.json",
+  "window_sizes": [
+    [
+      1280,
+      800
+    ],
+    [
+      1440,
+      900
+    ]
+  ],
+  "pause_seconds": 0.08,
+  "cups": [
+    "高球杯",
+    "古典杯",
+    "鸡尾酒杯",
+    "马天尼杯",
+    "玛格丽特杯",
+    "葡萄酒杯",
+    "铜杯"
+  ],
+  "customer_index": 3
+}

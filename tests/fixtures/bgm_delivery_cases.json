@@ -1,0 +1,18 @@
+{
+  "save_path": "user://test_bgm_delivery.json",
+  "rival": "karn",
+  "recipe": "S-01",
+  "stock_ml": 10000,
+  "cash": 10000,
+  "play_wait": 0.15,
+  "loop_tail": 0.1,
+  "loop_wait": 0.45,
+  "peak_floor_db": -70,
+  "cases": [
+    {"method": "show_start", "context": "title", "cue": "music.title", "file": "res://assets/audio/music/title.ogg"},
+    {"method": "_start_guest", "context": "reception", "cue": "music.bar", "file": "res://assets/audio/music/bar.ogg"},
+    {"method": "show_shop", "context": "shop", "cue": "music.market", "file": "res://assets/audio/music/shop.ogg"},
+    {"method": "_show_street_visit", "context": "rival", "cue": "music.rival", "file": "res://assets/audio/music/rival.ogg"}
+  ],
+  "fallback_contexts": ["selection", "promotion", "ending"]
+}

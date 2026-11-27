@@ -1,0 +1,28 @@
+{
+  "save_path": "user://save_system_test.json",
+  "unwritable_path": "user://save_system_missing_dir/progress.json",
+  "invalid_json": "{truncated",
+  "unsupported_version": 999,
+  "invalid_cases": [
+    {"path": ["run", "money"], "value": -1},
+    {"path": ["run", "money"], "value": "360"},
+    {"path": ["run", "day"], "value": 1.5},
+    {"path": ["run", "equipment"], "value": null},
+    {"path": ["run", "stock"], "value": []},
+    {"path": ["run", "tiers"], "value": {}},
+    {"path": ["run", "rumors"], "value": [123]},
+    {"path": ["run", "queue"], "value": [null]},
+    {"path": ["run", "queue"], "value": [{"recipe_id": "missing", "customer_index": 0}]},
+    {"path": ["run", "queue"], "value": [{"recipe_id": "missing", "customer_index": "0"}]},
+    {"path": ["run", "phase"], "value": "missing"},
+    {"path": ["run", "companion"], "value": "missing"},
+    {"path": ["run", "promotion_id"], "value": []},
+    {"path": ["run", "guest_index"], "value": 999},
+    {"path": ["meta", "cycle"], "value": 0},
+    {"path": ["meta", "highest_cycle"], "value": "1"},
+    {"path": ["meta", "ability_grants"], "value": [{}]},
+    {"path": ["version"], "value": []},
+    {"path": ["run", "phase"], "value": {}},
+    {"path": ["version"], "value": 999}
+  ]
+}

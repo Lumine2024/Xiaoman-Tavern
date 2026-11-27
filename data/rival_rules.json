@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.0",
+  "status": "design_for_playtest",
+  "pricing_dependency": {
+    "path": "prices.json",
+    "catalog_version": "2026-11-18.v1",
+    "price_source": "pricing.calculate_price"
+  },
+  "timeline": {
+    "rumor_day": 3,
+    "pressure_day": 6,
+    "escalation_day": 10,
+    "ending_day": 13,
+    "min_response_delay_days": 1
+  },
+  "limits": {
+    "traffic_loss_per_day": 1,
+    "traffic_gain_per_day": 1,
+    "promotion_guaranteed_orders": 3,
+    "max_outages_total": 2,
+    "max_rival_discount_ratio": 0.25,
+    "background_mentions_per_rival_per_run": 3,
+    "max_event_per_day": 1
+  },
+  "market": {
+    "daily_variation_min": -0.06,
+    "daily_variation_max": 0.06,
+    "base_aux_outage_probability": 0.04,
+    "base_spirit_outage_probability": 0,
+    "base_outage_days": 1,
+    "base_substitute_probability": 0.8,
+    "bulk_extra_packs": 2,
+    "bulk_multiplier": 1.3,
+    "substitute_revenue_multiplier": 0.75,
+    "substitute_brew_errors": 0
+  },
+  "menu": {
+    "competitive_sell_price_step": 1,
+    "match_contribution_multiplier": 1,
+    "match_recovered_traffic": 1,
+    "defend_reputation_gain": 2,
+    "defend_reward_max_per_day": 1,
+    "premium_price_multiplier": 1.1,
+    "premium_tip_multiplier": 1.15,
+    "premium_reputation_gain": 1,
+    "premium_traffic_delta": -1,
+    "classic_recipe_ids": [
+      "M-01",
+      "M-05"
+    ],
+    "seasonal_fruits": [
+      "青柠汁",
+      "蔓越莓汁",
+      "菠萝汁"
+    ],
+    "rival_promotion_weight_enabled": false
+  },
+  "dialogue": {
+    "first_special_day": 6,
+    "special_window_days": 3,
+    "unique_per_event_type_per_run": true,
+    "fallback_to_repeatable_route_beat": true,
+    "responses": {
+      "empathy": {
+        "reputation": 1,
+        "intel_fraction": 1,
+        "tip_multiplier": 1,
+        "next_day_traffic": 0
+      },
+      "pragmatic": {
+        "reputation": 1,
+        "intel_fraction": 1,
+        "tip_multiplier": 1.1,
+        "next_day_traffic": 1
+      },
+      "side_with_rival": {
+        "reputation": 0,
+        "intel_fraction": 0.5,
+        "tip_multiplier": 1,
+        "next_day_traffic": 0
+      }
+    }
+  },
+  "endings": {
+    "alliance_choices": 5,
+    "max_qualifying_choices_per_day": 1,
+    "takeover_rival_ids": [
+      "karn",
+      "duren"
+    ],
+    "takeover_stock_multiplier": 0.75,
+    "takeover_pack_count": 2,
+    "resolution_effective_delay_days": 1
+  },
+  "rivals": {
+    "karn": {
+      "name": "瘸子卡恩",
+      "axis": "价格",
+      "stars": 1,
+      "price_scope": "S",
+      "competitor_initial_quote": 60,
+      "over_cap_traffic_delta": -1,
+      "procurement_multiplier": 1,
+      "outage_delta_pp": 0,
+      "substitute_probability": 0.8,
+      "crowd_segment_priority": [
+        "哥布林",
+        "半身人"
+      ],
+      "crowd_start_day": 10,
+      "crowd_replace_slots": 1,
+      "shared_events": [
+        "S-02",
+        "S-04",
+        "S-08",
+        "S-07"
+      ],
+      "exclusive_events": [
+        "R-01",
+        "R-02"
+      ],
+      "counterplay": {
+        "hard_promotion_without_match_streak_days": 3,
+        "permanent_traffic_delta": 1
+      },
+      "guard_price_policy": "use_catalog_price",
+      "match_price_policy": "min_catalog_and_competitor_quote",
+      "traffic_loss_if": "guard_price_above_quote",
+      "competitor_quote_policy": "fixed",
+      "premium_allowed_in_affected_band": false
+    },
+    "bella": {
+      "name": "快嘴贝拉",
+      "axis": "上新",
+      "stars": 2,
+      "copy_offer_start_streak_day": 4,
+      "classic_revenue_multiplier": 0.9,
+      "copied_promotion_revenue_multiplier": 0.9,
+      "procurement_multiplier": 1,
+      "outage_scope": "seasonal_fruits",
+      "outage_delta_pp": 15,
+      "substitute_probability": 0.75,
+      "crowd_segment_priority": [
+        "猫人",
+        "妖精"
+      ],
+      "crowd_start_day": 10,
+      "crowd_replace_slots": 1,
+      "shared_events": [
+        "S-01",
+        "S-04",
+        "S-02",
+        "S-09"
+      ],
+      "exclusive_events": [
+        "R-03",
+        "R-04"
+      ],
+      "counterplay": {
+        "collaboration_price_ref": "other_prices.design_events.collaboration.price",
+        "licensed_recipe_count": 1,
+        "collaboration_reputation_gain": 1,
+        "seasonal_distinct_promotions": 3,
+        "seasonal_window_days": 5
+      }
+    },
+    "marta": {
+      "name": "婶婶玛尔塔",
+      "axis": "人情",
+      "stars": 2,
+      "warm_recipe_ids": [],
+      "warm_feature_requires_recipe_tags": true,
+      "first_warm_revenue_multiplier": 1.2,
+      "cold_recipe_ice": "碎冰",
+      "cold_promotion_traffic_delta": -1,
+      "missed_regular_days": 2,
+      "missed_regular_traffic_delta": -1,
+      "procurement_multiplier": 1,
+      "outage_delta_pp": -5,
+      "substitute_probability": 0.85,
+      "crowd_segment_priority": [
+        "老居民"
+      ],
+      "crowd_start_day": 10,
+      "crowd_replace_slots": 1,
+      "shared_events": [
+        "S-06",
+        "S-10",
+        "S-03",
+        "S-07"
+      ],
+      "exclusive_events": [
+        "R-05",
+        "R-06"
+      ],
+      "counterplay": {
+        "regular_reservation_and_correct_dialogue_streak_days": 3,
+        "permanent_traffic_delta": 1
+      }
+    },
+    "duren": {
+      "name": "老账房杜伦",
+      "axis": "货源",
+      "stars": 3,
+      "procurement_multiplier": 1.15,
+      "emergency_procurement_multiplier": 1.4,
+      "emergency_payment": "cash",
+      "procurement_scope": "auxiliaries",
+      "outage_delta_pp": 4,
+      "outage_days": 2,
+      "outage_pressure_day": 10,
+      "substitute_probability": 0.55,
+      "priority_outage_scope": "promoted_recipe_auxiliaries",
+      "exempt_shortage_revenue_band": "H",
+      "credit_advance": 300,
+      "credit_payment_delay_days": 1,
+      "crowd_segment_priority": [
+        "游商"
+      ],
+      "crowd_start_day": 10,
+      "crowd_replace_slots": 1,
+      "shared_events": [
+        "S-05",
+        "S-08",
+        "S-02",
+        "S-01"
+      ],
+      "exclusive_events": [
+        "R-07",
+        "R-08"
+      ],
+      "counterplay": {
+        "required_event": "S-08",
+        "required_outcome": "inspection_passed"
+      }
+    },
+    "viola": {
+      "name": "银匙维奥拉",
+      "axis": "品味",
+      "stars": 3,
+      "premium_band": "H",
+      "min_base_tier": 2,
+      "wrong_cup_revenue_multiplier": 0.85,
+      "low_tier_revenue_multiplier": 0.8,
+      "both_noncompliant_revenue_multiplier": 0.8,
+      "compliant_tip_multiplier": 1.2,
+      "classic_revenue_multiplier": 1.1,
+      "procurement_multiplier": 1.08,
+      "procurement_min_base_tier": 2,
+      "outage_delta_pp": 10,
+      "outage_min_base_tier": 2,
+      "substitute_probability": 0.7,
+      "crowd_segment_priority": [
+        "精灵",
+        "龙裔"
+      ],
+      "crowd_start_day": 6,
+      "crowd_replace_slots": 1,
+      "reputation_check_day": 10,
+      "reputation_threshold": 3,
+      "low_reputation_delta": -1,
+      "shared_events": [
+        "S-03",
+        "S-07",
+        "S-06",
+        "S-08"
+      ],
+      "exclusive_events": [
+        "R-09",
+        "R-10"
+      ],
+      "counterplay": {
+        "fully_compliant_streak_days": 5,
+        "min_premium_serves_per_day": 1,
+        "rare_base_unlock_count": 2
+      },
+      "tasting": {
+        "reputation_gain": 2,
+        "voluntary_skip_service_nights": 1
+      }
+    },
+    "olga": {
+      "name": "听风的奥尔加",
+      "axis": "消息",
+      "stars": 4,
+      "procurement_multiplier": 1,
+      "outage_delta_pp": 0,
+      "substitute_probability": 0.8,
+      "forecast_days_ahead": 1,
+      "forecast_reliability": 0.8,
+      "allied_forecast_reliability": 0.9,
+      "follow_delay_days": 1,
+      "lock_days": 1,
+      "lock_max_per_day": 1,
+      "leak_start_day": 10,
+      "leak_repeat_days": 7,
+      "crowd_replace_slots": 0,
+      "shared_events": [
+        "S-04",
+        "S-05",
+        "S-08",
+        "S-09"
+      ],
+      "exclusive_events": [
+        "R-11",
+        "R-12"
+      ],
+      "counterplay": {
+        "paid_intel_purchases": 5
+      },
+      "lock_price_legacy_ref": "other_prices.design_events.price_lock",
+      "lock_service_fee_override": 8,
+      "lock_applies_to": "next_day_selected_purchasable_packs_only",
+      "leak_effect": "dialogue_only",
+      "follow_effect": "dialogue_only"
+    }
+  },
+  "rules_version": "1.1",
+  "supersedes": "../同行竞争v1/rival_rules.json"
+}

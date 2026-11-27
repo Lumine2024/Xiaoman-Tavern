@@ -1,0 +1,635 @@
+{
+  "version": 1,
+  "settings": {
+    "fade_seconds": 0.6,
+    "silence_db": -60.0,
+    "menu_duck_db": -8.0,
+    "voice_count": 12,
+    "defaults": {
+      "master": 1.0,
+      "music": 0.65,
+      "ambience": 0.35,
+      "sfx": 0.8
+    },
+    "labels": {
+      "master": "总音量",
+      "music": "音乐",
+      "ambience": "环境声",
+      "sfx": "音效"
+    },
+    "volume_step": 0.01
+  },
+  "contexts": {
+    "title": {
+      "music": "music.title",
+      "ambience": "ambience.street"
+    },
+    "selection": {
+      "music": "music.selection",
+      "ambience": "ambience.street"
+    },
+    "promotion": {
+      "music": "music.planning",
+      "ambience": "ambience.tavern"
+    },
+    "reception": {
+      "music": "music.bar",
+      "ambience": "ambience.tavern"
+    },
+    "shop": {
+      "music": "music.market",
+      "ambience": "ambience.market"
+    },
+    "rival": {
+      "music": "music.rival",
+      "ambience": "ambience.street"
+    },
+    "ending": {
+      "music": "music.ending",
+      "ambience": "ambience.tavern"
+    }
+  },
+  "mix_cues": {
+    "摇和": "sfx.mix_shake",
+    "长摇": "sfx.mix_shake",
+    "搅拌": "sfx.mix_stir",
+    "滚摇": "sfx.mix_roll"
+  },
+  "cues": {
+    "music.title": {
+      "files": [
+        "res://assets/audio/music/title.ogg"
+      ],
+      "group": "music",
+      "loop": true,
+      "gain_db": 0.0,
+      "fallback": "music.bar",
+      "name": "灯下等候",
+      "trigger": "标题",
+      "length": "60–90秒",
+      "brief": "温暖而略带孤独的主题动机，留出呼吸",
+      "priority": "优先"
+    },
+    "music.selection": {
+      "files": [
+        "res://assets/audio/music/selection.ogg"
+      ],
+      "group": "music",
+      "loop": true,
+      "gain_db": 0.0,
+      "fallback": "music.bar",
+      "name": "隔街相遇",
+      "trigger": "抽签与同行选择",
+      "length": "45–75秒",
+      "brief": "主题变奏，轻微悬念，不渲染战斗",
+      "priority": "后续"
+    },
+    "music.planning": {
+      "files": [
+        "res://assets/audio/music/planning.ogg"
+      ],
+      "group": "music",
+      "loop": true,
+      "gain_db": 0.0,
+      "fallback": "music.bar",
+      "name": "写下今晚",
+      "trigger": "挂牌与对策",
+      "length": "60–90秒",
+      "brief": "平稳、克制、适合阅读",
+      "priority": "后续"
+    },
+    "music.bar": {
+      "files": [
+        "res://assets/audio/music/bar.ogg"
+      ],
+      "group": "music",
+      "loop": true,
+      "gain_db": 0.0,
+      "fallback": "",
+      "name": "有人同坐",
+      "trigger": "教学及正常接待",
+      "length": "90–180秒",
+      "brief": "稀疏编配，无人声，给对白与倒酒留空间",
+      "priority": "优先"
+    },
+    "music.market": {
+      "files": [
+        "res://assets/audio/music/shop.ogg"
+      ],
+      "group": "music",
+      "loop": true,
+      "gain_db": 0.0,
+      "fallback": "music.bar",
+      "name": "月下备货",
+      "trigger": "D0及打烊商店",
+      "length": "60–120秒",
+      "brief": "轻快但不催促，重复采购不重新起奏",
+      "priority": "优先"
+    },
+    "music.rival": {
+      "files": [
+        "res://assets/audio/music/rival.ogg"
+      ],
+      "group": "music",
+      "loop": true,
+      "gain_db": 0.0,
+      "fallback": "music.bar",
+      "name": "门口来客",
+      "trigger": "对手上门",
+      "length": "30–60秒",
+      "brief": "沿主题动机增加张力，无惊吓突刺",
+      "priority": "后续"
+    },
+    "music.ending": {
+      "files": [
+        "res://assets/audio/music/ending.ogg"
+      ],
+      "group": "music",
+      "loop": true,
+      "gain_db": 0.0,
+      "fallback": "music.bar",
+      "name": "各自的灯",
+      "trigger": "D14收束",
+      "length": "60–90秒",
+      "brief": "主题回归，克制的释然，可循环",
+      "priority": "后续"
+    },
+    "ambience.street": {
+      "files": [
+        "res://assets/audio/ambience/street.ogg"
+      ],
+      "group": "ambience",
+      "loop": true,
+      "gain_db": 0.0,
+      "fallback": "",
+      "name": "灯下街声",
+      "trigger": "标题／选人",
+      "length": "60–120秒",
+      "brief": "低风与远处脚步，无可辨人声",
+      "priority": "后续"
+    },
+    "ambience.tavern": {
+      "files": [
+        "res://assets/audio/ambience/tavern.ogg"
+      ],
+      "group": "ambience",
+      "loop": true,
+      "gain_db": 0.0,
+      "fallback": "",
+      "name": "店内夜声",
+      "trigger": "挂牌／接待／收束",
+      "length": "60–120秒",
+      "brief": "低炉火、木屋、远处杯声；不重复明显动作",
+      "priority": "后续"
+    },
+    "ambience.market": {
+      "files": [
+        "res://assets/audio/ambience/market.ogg"
+      ],
+      "group": "ambience",
+      "loop": true,
+      "gain_db": 0.0,
+      "fallback": "",
+      "name": "集市夜声",
+      "trigger": "D0／采购",
+      "length": "60–120秒",
+      "brief": "远处摊位与脚步，不压过操作音",
+      "priority": "优先"
+    },
+    "sfx.ui_click": {
+      "files": [
+        "res://assets/audio/sfx/ui_click.ogg"
+      ],
+      "group": "sfx",
+      "loop": false,
+      "ui": true,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "按钮确认",
+      "trigger": "原生按钮",
+      "length": "0.05–0.2秒",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "优先"
+    },
+    "sfx.ui_back": {
+      "files": [
+        "res://assets/audio/sfx/ui_back.wav"
+      ],
+      "group": "sfx",
+      "loop": false,
+      "ui": true,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "菜单合拢",
+      "trigger": "暂停菜单关闭",
+      "length": "0.1–0.3秒",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "后续"
+    },
+    "sfx.draw_roll": {
+      "files": [
+        "res://assets/audio/sfx/draw_roll.ogg"
+      ],
+      "group": "sfx",
+      "loop": true,
+      "ui": true,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "酒签流转",
+      "trigger": "抽签滚动循环",
+      "length": "1–3秒循环",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "后续"
+    },
+    "sfx.draw_reveal": {
+      "files": [
+        "res://assets/audio/sfx/draw_reveal.ogg"
+      ],
+      "group": "sfx",
+      "loop": false,
+      "ui": true,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "街坊落定",
+      "trigger": "抽签落定",
+      "length": "0.4–1秒",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "后续"
+    },
+    "sfx.drawer_open": {
+      "files": [
+        "res://assets/audio/sfx/drawer.ogg"
+      ],
+      "group": "sfx",
+      "loop": false,
+      "ui": false,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "打开抽屉",
+      "trigger": "打开或切换抽屉",
+      "length": "0.2–0.5秒",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "后续"
+    },
+    "sfx.drawer_close": {
+      "files": [
+        "res://assets/audio/sfx/drawer.ogg"
+      ],
+      "group": "sfx",
+      "loop": false,
+      "ui": false,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "合上抽屉",
+      "trigger": "关闭抽屉",
+      "length": "0.2–0.5秒",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "后续"
+    },
+    "sfx.bottle_pick": {
+      "files": [
+        "res://assets/audio/sfx/bottle_pick.wav"
+      ],
+      "group": "sfx",
+      "loop": false,
+      "ui": false,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "取瓶",
+      "trigger": "开始量取",
+      "length": "0.1–0.3秒",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "后续"
+    },
+    "sfx.pour": {
+      "files": [
+        "res://assets/audio/sfx/pour.ogg"
+      ],
+      "group": "sfx",
+      "loop": true,
+      "ui": false,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "量筒倒酒",
+      "trigger": "实际液面增长期间循环",
+      "length": "1–3秒循环",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "优先"
+    },
+    "sfx.transfer": {
+      "files": [
+        "res://assets/audio/sfx/transfer.ogg"
+      ],
+      "group": "sfx",
+      "loop": false,
+      "ui": false,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "量筒入壶",
+      "trigger": "成功倒入壶",
+      "length": "0.3–0.7秒",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "优先"
+    },
+    "sfx.mix_shake": {
+      "files": [
+        "res://assets/audio/sfx/mix_shake.ogg"
+      ],
+      "group": "sfx",
+      "loop": true,
+      "ui": false,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "摇和",
+      "trigger": "摇和／长摇真实活动期间循环",
+      "length": "1–3秒循环",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "优先"
+    },
+    "sfx.mix_stir": {
+      "files": [
+        "res://assets/audio/sfx/mix_stir.wav"
+      ],
+      "group": "sfx",
+      "loop": true,
+      "ui": false,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "搅拌",
+      "trigger": "搅拌真实活动期间循环",
+      "length": "1–3秒循环",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "后续"
+    },
+    "sfx.mix_roll": {
+      "files": [
+        "res://assets/audio/sfx/mix_roll.wav"
+      ],
+      "group": "sfx",
+      "loop": true,
+      "ui": false,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "滚摇",
+      "trigger": "滚摇真实活动期间循环",
+      "length": "1–3秒循环",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "后续"
+    },
+    "sfx.mix_straight": {
+      "files": [
+        "res://assets/audio/sfx/mix_shake.ogg"
+      ],
+      "group": "sfx",
+      "loop": true,
+      "ui": false,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "直调轻晃",
+      "trigger": "直调近景自动轻晃循环",
+      "length": "1–2秒循环",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "后续"
+    },
+    "sfx.mix_good": {
+      "files": [
+        "res://assets/audio/sfx/mix_good.wav"
+      ],
+      "group": "sfx",
+      "loop": false,
+      "ui": false,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "调制合拍",
+      "trigger": "计时调制完成且未增加失误",
+      "length": "0.1–0.4秒",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "后续"
+    },
+    "sfx.mix_miss": {
+      "files": [
+        "res://assets/audio/sfx/mix_miss.wav"
+      ],
+      "group": "sfx",
+      "loop": false,
+      "ui": false,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "调制偏差",
+      "trigger": "计时调制增加失误",
+      "length": "0.1–0.4秒",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "后续"
+    },
+    "sfx.cup": {
+      "files": [
+        "res://assets/audio/sfx/cup.ogg"
+      ],
+      "group": "sfx",
+      "loop": false,
+      "ui": false,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "取杯",
+      "trigger": "选择杯具",
+      "length": "0.1–0.3秒",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "优先"
+    },
+    "sfx.ice": {
+      "files": [
+        "res://assets/audio/sfx/ice_01.ogg"
+      ],
+      "group": "sfx",
+      "loop": false,
+      "ui": false,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "放冰",
+      "trigger": "选择冰型",
+      "length": "0.2–0.5秒",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "优先"
+    },
+    "sfx.glass_pour": {
+      "files": [
+        "res://assets/audio/sfx/glass_pour.ogg"
+      ],
+      "group": "sfx",
+      "loop": false,
+      "ui": false,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "入杯",
+      "trigger": "壶中酒倒入杯",
+      "length": "0.3–0.8秒",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "优先"
+    },
+    "sfx.topup": {
+      "files": [
+        "res://assets/audio/sfx/topup.ogg"
+      ],
+      "group": "sfx",
+      "loop": false,
+      "ui": false,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "后注",
+      "trigger": "实际后注扣料",
+      "length": "0.3–0.8秒",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "后续"
+    },
+    "sfx.garnish": {
+      "files": [
+        "res://assets/audio/sfx/garnish.wav"
+      ],
+      "group": "sfx",
+      "loop": false,
+      "ui": false,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "放装饰",
+      "trigger": "放固体／装饰",
+      "length": "0.1–0.3秒",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "后续"
+    },
+    "sfx.bell": {
+      "files": [
+        "res://assets/audio/sfx/bell.ogg"
+      ],
+      "group": "sfx",
+      "loop": false,
+      "ui": false,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "出品铃",
+      "trigger": "点击铃铛出品",
+      "length": "0.5–1.5秒自然尾音",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "优先"
+    },
+    "sfx.result_good": {
+      "files": [
+        "res://assets/audio/sfx/result_good.wav"
+      ],
+      "group": "sfx",
+      "loop": false,
+      "ui": false,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "好酒回应",
+      "trigger": "正确出品",
+      "length": "0.5–1.2秒",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "后续"
+    },
+    "sfx.result_imperfect": {
+      "files": [
+        "res://assets/audio/sfx/result_imperfect.wav"
+      ],
+      "group": "sfx",
+      "loop": false,
+      "ui": false,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "遗憾回应",
+      "trigger": "未完美出品",
+      "length": "0.3–0.8秒",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "后续"
+    },
+    "sfx.result_timeout": {
+      "files": [
+        "res://assets/audio/sfx/result_timeout.wav"
+      ],
+      "group": "sfx",
+      "loop": false,
+      "ui": false,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "未能完成",
+      "trigger": "超时／放弃",
+      "length": "0.3–0.8秒",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "后续"
+    },
+    "sfx.purchase": {
+      "files": [
+        "res://assets/audio/sfx/purchase.ogg"
+      ],
+      "group": "sfx",
+      "loop": false,
+      "ui": true,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "成交",
+      "trigger": "成功采购",
+      "length": "0.2–0.5秒",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "优先"
+    },
+    "sfx.upgrade": {
+      "files": [
+        "res://assets/audio/sfx/upgrade.wav"
+      ],
+      "group": "sfx",
+      "loop": false,
+      "ui": true,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "器材入店",
+      "trigger": "成功升级",
+      "length": "0.3–0.8秒",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "后续"
+    },
+    "sfx.guest_arrive": {
+      "files": [
+        "res://assets/audio/sfx/walk.ogg"
+      ],
+      "group": "sfx",
+      "loop": false,
+      "ui": false,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "来客",
+      "trigger": "可服务顾客到店",
+      "length": "0.3–0.8秒",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "后续"
+    },
+    "sfx.guest_depart": {
+      "files": [
+        "res://assets/audio/sfx/guest_depart.ogg"
+      ],
+      "group": "sfx",
+      "loop": false,
+      "ui": false,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "送客",
+      "trigger": "缺料送客",
+      "length": "0.3–0.8秒",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "后续"
+    },
+    "sfx.intel": {
+      "files": [
+        "res://assets/audio/sfx/intel.wav"
+      ],
+      "group": "sfx",
+      "loop": false,
+      "ui": false,
+      "gain_db": 0.0,
+      "cooldown_ms": 50,
+      "name": "听见线索",
+      "trigger": "真实事件消息或核实",
+      "length": "0.2–0.6秒",
+      "brief": "柔和近距离拟音；保留尾音，避免刺耳高频",
+      "priority": "后续"
+    }
+  }
+}

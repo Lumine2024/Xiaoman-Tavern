@@ -1,0 +1,2417 @@
+{
+  "schema_version": "1.0",
+  "catalog_version": "2026-11-18.v1",
+  "status": "design_handoff_not_applied_to_game",
+  "currency": "game_currency",
+  "description": "推荐版统一物价；原料与规则为计算源，recipes.price及prices为导出缓存。与原型配置结构不同，需要适配。",
+  "pricing_rules": {
+    "round_to": 5,
+    "max_cost_ratio": 0.25,
+    "consumables_per_drink": 1.5,
+    "cost_value_multiplier": 2,
+    "difficulty_base": {
+      "S": 45,
+      "M": 65,
+      "H": 85
+    },
+    "difficulty_labels": {
+      "S": "简单",
+      "M": "中等",
+      "H": "困难"
+    },
+    "methods": {
+      "直调": {
+        "extra_value": 0
+      },
+      "搅拌": {
+        "extra_value": 0
+      },
+      "摇和": {
+        "extra_value": 0
+      },
+      "滚摇": {
+        "extra_value": 5
+      },
+      "长摇": {
+        "extra_value": 5
+      }
+    },
+    "work": {
+      "included_liquid_portions": 3,
+      "included_garnishes": 1,
+      "per_extra_liquid": 3,
+      "per_extra_garnish": 3,
+      "per_pre_solid": 3
+    },
+    "tier_policy": "原料等级进货价 = 原料一级价 + 家族等级模板价 - 家族一级模板价；朗姆风格固定差价不重复乘品质倍率。升级售价 = 向上取整到步长(max(一级挂牌价+成本价值系数×成本差,升级成本/成本率上限))。",
+    "cost_policy": "液体含后注；固体、冰、装饰、杯具使用损耗统一包含在每杯耗材1.5中，不按每个项目重复收费；不含采购库存报废、店长、偏好或小费。"
+  },
+  "base_families": {
+    "威士忌": {
+      "tiers": [
+        {
+          "level": 1,
+          "label": "巷口调和",
+          "pack_price": 60,
+          "unlock_fee": 0
+        },
+        {
+          "level": 2,
+          "label": "高地单一麦芽",
+          "pack_price": 95,
+          "unlock_fee": 95
+        },
+        {
+          "level": 3,
+          "label": "桶强雪莉单桶",
+          "pack_price": 150,
+          "unlock_fee": 150
+        }
+      ]
+    },
+    "金酒": {
+      "tiers": [
+        {
+          "level": 1,
+          "label": "平价伦敦干",
+          "pack_price": 60,
+          "unlock_fee": 0
+        },
+        {
+          "level": 2,
+          "label": "手工植物金",
+          "pack_price": 95,
+          "unlock_fee": 95
+        },
+        {
+          "level": 3,
+          "label": "过桶老汤姆",
+          "pack_price": 150,
+          "unlock_fee": 150
+        }
+      ]
+    },
+    "朗姆": {
+      "tiers": [
+        {
+          "level": 1,
+          "label": "白朗姆",
+          "pack_price": 55,
+          "unlock_fee": 0
+        },
+        {
+          "level": 2,
+          "label": "陈年朗姆",
+          "pack_price": 90,
+          "unlock_fee": 90
+        },
+        {
+          "level": 3,
+          "label": "高酯牙买加",
+          "pack_price": 145,
+          "unlock_fee": 145
+        }
+      ]
+    },
+    "龙舌兰": {
+      "tiers": [
+        {
+          "level": 1,
+          "label": "银龙舌兰",
+          "pack_price": 65,
+          "unlock_fee": 0
+        },
+        {
+          "level": 2,
+          "label": "微陈 Reposado",
+          "pack_price": 100,
+          "unlock_fee": 100
+        },
+        {
+          "level": 3,
+          "label": "陈年 Añejo",
+          "pack_price": 155,
+          "unlock_fee": 155
+        }
+      ]
+    },
+    "伏特加": {
+      "tiers": [
+        {
+          "level": 1,
+          "label": "谷物伏特加",
+          "pack_price": 50,
+          "unlock_fee": 0
+        },
+        {
+          "level": 2,
+          "label": "小麦伏特加",
+          "pack_price": 85,
+          "unlock_fee": 85
+        },
+        {
+          "level": 3,
+          "label": "小批次单蒸",
+          "pack_price": 135,
+          "unlock_fee": 135
+        }
+      ]
+    },
+    "干邑": {
+      "tiers": [
+        {
+          "level": 1,
+          "label": "VS",
+          "pack_price": 80,
+          "unlock_fee": 0
+        },
+        {
+          "level": 2,
+          "label": "VSOP",
+          "pack_price": 120,
+          "unlock_fee": 120
+        },
+        {
+          "level": 3,
+          "label": "XO",
+          "pack_price": 190,
+          "unlock_fee": 190
+        }
+      ]
+    }
+  },
+  "ingredients": {
+    "威士忌": {
+      "name": "威士忌",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 60,
+      "family": "威士忌",
+      "category": "基酒",
+      "status": "推荐版"
+    },
+    "金酒": {
+      "name": "金酒",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 60,
+      "family": "金酒",
+      "category": "基酒",
+      "status": "推荐版"
+    },
+    "白朗姆": {
+      "name": "白朗姆",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 55,
+      "family": "朗姆",
+      "category": "基酒",
+      "status": "推荐版"
+    },
+    "陈年朗姆": {
+      "name": "陈年朗姆",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 90,
+      "family": "朗姆",
+      "category": "基酒",
+      "status": "推荐版"
+    },
+    "高酯朗姆": {
+      "name": "高酯朗姆",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 145,
+      "family": "朗姆",
+      "category": "基酒",
+      "status": "推荐版"
+    },
+    "龙舌兰": {
+      "name": "龙舌兰",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 65,
+      "family": "龙舌兰",
+      "category": "基酒",
+      "status": "推荐版"
+    },
+    "伏特加": {
+      "name": "伏特加",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 50,
+      "family": "伏特加",
+      "category": "基酒",
+      "status": "推荐版"
+    },
+    "干邑": {
+      "name": "干邑",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 80,
+      "family": "干邑",
+      "category": "基酒",
+      "status": "推荐版"
+    },
+    "甜味美思": {
+      "name": "甜味美思",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 45,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "干味美思": {
+      "name": "干味美思",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 45,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "金巴利": {
+      "name": "金巴利",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 80,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "阿佩罗": {
+      "name": "阿佩罗",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 75,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "橙皮利口": {
+      "name": "橙皮利口",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 70,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "樱桃利口": {
+      "name": "樱桃利口",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 90,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "草本利口": {
+      "name": "草本利口",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 120,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "咖啡利口": {
+      "name": "咖啡利口",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 60,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "杏仁利口": {
+      "name": "杏仁利口",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 60,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "糖浆": {
+      "name": "糖浆",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 12,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "蜂蜜糖浆": {
+      "name": "蜂蜜糖浆",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 25,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "红石榴糖浆": {
+      "name": "红石榴糖浆",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 20,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "覆盆子糖浆": {
+      "name": "覆盆子糖浆",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 30,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "苦精": {
+      "name": "苦精",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 180,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "柠檬汁": {
+      "name": "柠檬汁",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 20,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "青柠汁": {
+      "name": "青柠汁",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 20,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "橙汁": {
+      "name": "橙汁",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 15,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "蔓越莓汁": {
+      "name": "蔓越莓汁",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 20,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "菠萝汁": {
+      "name": "菠萝汁",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 20,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "番茄汁": {
+      "name": "番茄汁",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 15,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "苏打水": {
+      "name": "苏打水",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 4,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "可乐": {
+      "name": "可乐",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 8,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "姜汁啤酒": {
+      "name": "姜汁啤酒",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 20,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "汤力水": {
+      "name": "汤力水",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 16,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "淡奶油": {
+      "name": "淡奶油",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 30,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "蛋白": {
+      "name": "蛋白",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 20,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "伍斯特酱": {
+      "name": "伍斯特酱",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 40,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "辣酱": {
+      "name": "辣酱",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 40,
+      "family": null,
+      "category": "辅料",
+      "status": "推荐版"
+    },
+    "浓缩咖啡": {
+      "name": "浓缩咖啡",
+      "unit": "ml",
+      "pack_ml": 500,
+      "pack_price": 40,
+      "family": null,
+      "category": "辅料",
+      "status": "新增补全，当前菜单未使用"
+    }
+  },
+  "pooled_consumables": {
+    "charge_mode": "cost_budget_recommendation_not_yet_debited_by_game",
+    "pre_solids": [
+      "薄荷"
+    ],
+    "garnishes": [
+      "青柠角",
+      "柠檬角",
+      "柠檬皮",
+      "橙皮",
+      "橙片",
+      "樱桃",
+      "薄荷",
+      "菠萝叶",
+      "菠萝片",
+      "橄榄",
+      "芹菜",
+      "咖啡豆",
+      "盐边",
+      "黑胡椒",
+      "覆盆子",
+      "青柠皮"
+    ],
+    "ice": [
+      "大冰",
+      "碎冰",
+      "无冰"
+    ],
+    "cups": [
+      "高球杯",
+      "古典杯",
+      "鸡尾酒杯",
+      "马天尼杯",
+      "玛格丽特杯",
+      "葡萄酒杯",
+      "铜杯"
+    ],
+    "standalone_purchase_price": null,
+    "note": "没有独立采购价，统一计入耗材预算；不是免费采购或玻璃杯整只买入价。",
+    "budget_source": "pricing_rules.consumables_per_drink"
+  },
+  "other_prices": {
+    "equipment_upgrade": {
+      "price": 160,
+      "status": "沿用原程序",
+      "description": "每次器材升级，同价，可多次购买"
+    },
+    "design_events": {
+      "collaboration": {
+        "price": 80,
+        "description": "贝拉联名一次"
+      },
+      "price_lock": {
+        "min_price": 30,
+        "max_price": 60,
+        "description": "奥尔加锁价一次，具体事件在范围内配置"
+      },
+      "reputation_round": {
+        "price": 60,
+        "description": "请一轮压下口碑事件"
+      },
+      "apprentice_daily_raise_practical": {
+        "price": 10,
+        "description": "学徒务实方案，每日增加开销"
+      },
+      "apprentice_daily_raise_empathy": {
+        "price": 15,
+        "description": "学徒共情方案，每日增加开销"
+      },
+      "dialogue_extra_ingredient": {
+        "price": 8,
+        "description": "对话加料事件固定额外成本，不作为标准配方单价"
+      },
+      "musician_support": {
+        "price": 20,
+        "description": "乐师支持事件额外成本"
+      }
+    },
+    "design_event_status": "沿用主创文档，原型尚未实现；不参与本计算器标准价"
+  },
+  "legacy_reference": {
+    "uniform_auxiliary_pack_price": 24,
+    "difficulty_prices": {
+      "S": 48,
+      "M": 78,
+      "H": 108
+    },
+    "unused_upgrade_price": 120,
+    "note": "只供迁移审计，计算器不引用旧统一辅料价、旧菜单档价或未使用升级字段。"
+  },
+  "economy_context": {
+    "starting_money": 360,
+    "initial_stock_ml_per_liquid": 600,
+    "customers_min": 5,
+    "customers_max": 6,
+    "promotion_guarantee": 3,
+    "spoilage_ratio": 0.2,
+    "tier_price_bonus_legacy": 0.15,
+    "rapport_tip_ratio": 0.1,
+    "note": "上下文参数，非本次新增价格；升级挂牌价接入时禁叠旧tier_price_bonus售价乘数，偏好奖励独立设计。"
+  },
+  "recipes": {
+    "S-01": {
+      "id": "S-01",
+      "name": "金汤力",
+      "difficulty": "S",
+      "ingredients": [
+        {
+          "name": "金酒",
+          "amount": 45,
+          "unit": "ml"
+        },
+        {
+          "name": "青柠汁",
+          "amount": 10,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [
+        {
+          "name": "汤力水",
+          "amount": 120,
+          "unit": "ml"
+        }
+      ],
+      "method": "直调",
+      "cup": "高球杯",
+      "ice": "大冰",
+      "garnish": [
+        "青柠角"
+      ],
+      "price": 70.0,
+      "previous_price": 48,
+      "prices": {
+        "1": {
+          "price": 70.0,
+          "cost": 11.14,
+          "cost_ratio": 0.159143,
+          "work_value": 0.0
+        },
+        "2": {
+          "price": 80.0,
+          "cost": 14.29,
+          "cost_ratio": 0.178625,
+          "work_value": 0.0
+        },
+        "3": {
+          "price": 90.0,
+          "cost": 19.24,
+          "cost_ratio": 0.213778,
+          "work_value": 0.0
+        }
+      }
+    },
+    "S-02": {
+      "id": "S-02",
+      "name": "威士忌嗨棒",
+      "difficulty": "S",
+      "ingredients": [
+        {
+          "name": "威士忌",
+          "amount": 45,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [
+        {
+          "name": "苏打水",
+          "amount": 120,
+          "unit": "ml"
+        }
+      ],
+      "method": "直调",
+      "cup": "高球杯",
+      "ice": "大冰",
+      "garnish": [
+        "柠檬角"
+      ],
+      "price": 65.0,
+      "previous_price": 48,
+      "prices": {
+        "1": {
+          "price": 65.0,
+          "cost": 7.86,
+          "cost_ratio": 0.120923,
+          "work_value": 0.0
+        },
+        "2": {
+          "price": 75.0,
+          "cost": 11.01,
+          "cost_ratio": 0.1468,
+          "work_value": 0.0
+        },
+        "3": {
+          "price": 85.0,
+          "cost": 15.96,
+          "cost_ratio": 0.187765,
+          "work_value": 0.0
+        }
+      }
+    },
+    "S-03": {
+      "id": "S-03",
+      "name": "自由古巴",
+      "difficulty": "S",
+      "ingredients": [
+        {
+          "name": "白朗姆",
+          "amount": 45,
+          "unit": "ml"
+        },
+        {
+          "name": "青柠汁",
+          "amount": 10,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [
+        {
+          "name": "可乐",
+          "amount": 120,
+          "unit": "ml"
+        }
+      ],
+      "method": "直调",
+      "cup": "高球杯",
+      "ice": "大冰",
+      "garnish": [
+        "青柠角"
+      ],
+      "price": 65.0,
+      "previous_price": 48,
+      "prices": {
+        "1": {
+          "price": 65.0,
+          "cost": 8.77,
+          "cost_ratio": 0.134923,
+          "work_value": 0.0
+        },
+        "2": {
+          "price": 75.0,
+          "cost": 11.92,
+          "cost_ratio": 0.158933,
+          "work_value": 0.0
+        },
+        "3": {
+          "price": 85.0,
+          "cost": 16.87,
+          "cost_ratio": 0.198471,
+          "work_value": 0.0
+        }
+      }
+    },
+    "S-04": {
+      "id": "S-04",
+      "name": "螺丝起子",
+      "difficulty": "S",
+      "ingredients": [
+        {
+          "name": "伏特加",
+          "amount": 45,
+          "unit": "ml"
+        },
+        {
+          "name": "橙汁",
+          "amount": 120,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [],
+      "method": "直调",
+      "cup": "高球杯",
+      "ice": "大冰",
+      "garnish": [
+        "橙片"
+      ],
+      "price": 65.0,
+      "previous_price": 48,
+      "prices": {
+        "1": {
+          "price": 65.0,
+          "cost": 9.6,
+          "cost_ratio": 0.147692,
+          "work_value": 0.0
+        },
+        "2": {
+          "price": 75.0,
+          "cost": 12.75,
+          "cost_ratio": 0.17,
+          "work_value": 0.0
+        },
+        "3": {
+          "price": 85.0,
+          "cost": 17.25,
+          "cost_ratio": 0.202941,
+          "work_value": 0.0
+        }
+      }
+    },
+    "S-05": {
+      "id": "S-05",
+      "name": "伏特加苏打",
+      "difficulty": "S",
+      "ingredients": [
+        {
+          "name": "伏特加",
+          "amount": 45,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [
+        {
+          "name": "苏打水",
+          "amount": 120,
+          "unit": "ml"
+        }
+      ],
+      "method": "直调",
+      "cup": "高球杯",
+      "ice": "大冰",
+      "garnish": [
+        "青柠角"
+      ],
+      "price": 60.0,
+      "previous_price": 48,
+      "prices": {
+        "1": {
+          "price": 60.0,
+          "cost": 6.96,
+          "cost_ratio": 0.116,
+          "work_value": 0.0
+        },
+        "2": {
+          "price": 70.0,
+          "cost": 10.11,
+          "cost_ratio": 0.144429,
+          "work_value": 0.0
+        },
+        "3": {
+          "price": 80.0,
+          "cost": 14.61,
+          "cost_ratio": 0.182625,
+          "work_value": 0.0
+        }
+      }
+    },
+    "S-06": {
+      "id": "S-06",
+      "name": "莫斯科骡子",
+      "difficulty": "S",
+      "ingredients": [
+        {
+          "name": "伏特加",
+          "amount": 45,
+          "unit": "ml"
+        },
+        {
+          "name": "青柠汁",
+          "amount": 10,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [
+        {
+          "name": "姜汁啤酒",
+          "amount": 120,
+          "unit": "ml"
+        }
+      ],
+      "method": "直调",
+      "cup": "铜杯",
+      "ice": "大冰",
+      "garnish": [
+        "青柠角"
+      ],
+      "price": 70.0,
+      "previous_price": 48,
+      "prices": {
+        "1": {
+          "price": 70.0,
+          "cost": 11.2,
+          "cost_ratio": 0.16,
+          "work_value": 0.0
+        },
+        "2": {
+          "price": 80.0,
+          "cost": 14.35,
+          "cost_ratio": 0.179375,
+          "work_value": 0.0
+        },
+        "3": {
+          "price": 90.0,
+          "cost": 18.85,
+          "cost_ratio": 0.209444,
+          "work_value": 0.0
+        }
+      }
+    },
+    "S-07": {
+      "id": "S-07",
+      "name": "威士忌可乐",
+      "difficulty": "S",
+      "ingredients": [
+        {
+          "name": "威士忌",
+          "amount": 45,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [
+        {
+          "name": "可乐",
+          "amount": 120,
+          "unit": "ml"
+        }
+      ],
+      "method": "直调",
+      "cup": "高球杯",
+      "ice": "大冰",
+      "garnish": [
+        "柠檬角"
+      ],
+      "price": 65.0,
+      "previous_price": 48,
+      "prices": {
+        "1": {
+          "price": 65.0,
+          "cost": 8.82,
+          "cost_ratio": 0.135692,
+          "work_value": 0.0
+        },
+        "2": {
+          "price": 75.0,
+          "cost": 11.97,
+          "cost_ratio": 0.1596,
+          "work_value": 0.0
+        },
+        "3": {
+          "price": 85.0,
+          "cost": 16.92,
+          "cost_ratio": 0.199059,
+          "work_value": 0.0
+        }
+      }
+    },
+    "S-08": {
+      "id": "S-08",
+      "name": "美式",
+      "difficulty": "S",
+      "ingredients": [
+        {
+          "name": "金巴利",
+          "amount": 30,
+          "unit": "ml"
+        },
+        {
+          "name": "甜味美思",
+          "amount": 30,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [
+        {
+          "name": "苏打水",
+          "amount": 90,
+          "unit": "ml"
+        }
+      ],
+      "method": "直调",
+      "cup": "高球杯",
+      "ice": "大冰",
+      "garnish": [
+        "橙皮"
+      ],
+      "price": 65.0,
+      "previous_price": 48,
+      "prices": {
+        "1": {
+          "price": 65.0,
+          "cost": 9.72,
+          "cost_ratio": 0.149538,
+          "work_value": 0.0
+        },
+        "2": {
+          "price": 65.0,
+          "cost": 9.72,
+          "cost_ratio": 0.149538,
+          "work_value": 0.0
+        },
+        "3": {
+          "price": 65.0,
+          "cost": 9.72,
+          "cost_ratio": 0.149538,
+          "work_value": 0.0
+        }
+      }
+    },
+    "S-09": {
+      "id": "S-09",
+      "name": "金巴利橙",
+      "difficulty": "S",
+      "ingredients": [
+        {
+          "name": "金巴利",
+          "amount": 45,
+          "unit": "ml"
+        },
+        {
+          "name": "橙汁",
+          "amount": 120,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [],
+      "method": "直调",
+      "cup": "高球杯",
+      "ice": "大冰",
+      "garnish": [
+        "橙片"
+      ],
+      "price": 70.0,
+      "previous_price": 48,
+      "prices": {
+        "1": {
+          "price": 70.0,
+          "cost": 12.3,
+          "cost_ratio": 0.175714,
+          "work_value": 0.0
+        },
+        "2": {
+          "price": 70.0,
+          "cost": 12.3,
+          "cost_ratio": 0.175714,
+          "work_value": 0.0
+        },
+        "3": {
+          "price": 70.0,
+          "cost": 12.3,
+          "cost_ratio": 0.175714,
+          "work_value": 0.0
+        }
+      }
+    },
+    "S-10": {
+      "id": "S-10",
+      "name": "暗黑风暴",
+      "difficulty": "S",
+      "ingredients": [
+        {
+          "name": "陈年朗姆",
+          "amount": 45,
+          "unit": "ml"
+        },
+        {
+          "name": "青柠汁",
+          "amount": 10,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [
+        {
+          "name": "姜汁啤酒",
+          "amount": 120,
+          "unit": "ml"
+        }
+      ],
+      "method": "直调",
+      "cup": "高球杯",
+      "ice": "大冰",
+      "garnish": [
+        "青柠角"
+      ],
+      "price": 75.0,
+      "previous_price": 48,
+      "prices": {
+        "1": {
+          "price": 75.0,
+          "cost": 14.8,
+          "cost_ratio": 0.197333,
+          "work_value": 0.0
+        },
+        "2": {
+          "price": 85.0,
+          "cost": 17.95,
+          "cost_ratio": 0.211176,
+          "work_value": 0.0
+        },
+        "3": {
+          "price": 95.0,
+          "cost": 22.9,
+          "cost_ratio": 0.241053,
+          "work_value": 0.0
+        }
+      }
+    },
+    "M-01": {
+      "id": "M-01",
+      "name": "古典",
+      "difficulty": "M",
+      "ingredients": [
+        {
+          "name": "威士忌",
+          "amount": 60,
+          "unit": "ml"
+        },
+        {
+          "name": "糖浆",
+          "amount": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "苦精",
+          "amount": 3,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [],
+      "method": "搅拌",
+      "cup": "古典杯",
+      "ice": "大冰",
+      "garnish": [
+        "橙皮"
+      ],
+      "price": 90.0,
+      "previous_price": 78,
+      "prices": {
+        "1": {
+          "price": 90.0,
+          "cost": 10.02,
+          "cost_ratio": 0.111333,
+          "work_value": 0.0
+        },
+        "2": {
+          "price": 100.0,
+          "cost": 14.22,
+          "cost_ratio": 0.1422,
+          "work_value": 0.0
+        },
+        "3": {
+          "price": 115.0,
+          "cost": 20.82,
+          "cost_ratio": 0.181043,
+          "work_value": 0.0
+        }
+      }
+    },
+    "M-02": {
+      "id": "M-02",
+      "name": "尼格罗尼",
+      "difficulty": "M",
+      "ingredients": [
+        {
+          "name": "金酒",
+          "amount": 30,
+          "unit": "ml"
+        },
+        {
+          "name": "金巴利",
+          "amount": 30,
+          "unit": "ml"
+        },
+        {
+          "name": "甜味美思",
+          "amount": 30,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [],
+      "method": "搅拌",
+      "cup": "古典杯",
+      "ice": "大冰",
+      "garnish": [
+        "橙皮"
+      ],
+      "price": 95.0,
+      "previous_price": 78,
+      "prices": {
+        "1": {
+          "price": 95.0,
+          "cost": 12.6,
+          "cost_ratio": 0.132632,
+          "work_value": 0.0
+        },
+        "2": {
+          "price": 100.0,
+          "cost": 14.7,
+          "cost_ratio": 0.147,
+          "work_value": 0.0
+        },
+        "3": {
+          "price": 110.0,
+          "cost": 18.0,
+          "cost_ratio": 0.163636,
+          "work_value": 0.0
+        }
+      }
+    },
+    "M-03": {
+      "id": "M-03",
+      "name": "干马天尼",
+      "difficulty": "M",
+      "ingredients": [
+        {
+          "name": "金酒",
+          "amount": 60,
+          "unit": "ml"
+        },
+        {
+          "name": "干味美思",
+          "amount": 10,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [],
+      "method": "搅拌",
+      "cup": "马天尼杯",
+      "ice": "无冰",
+      "garnish": [
+        "橄榄"
+      ],
+      "price": 85.0,
+      "previous_price": 78,
+      "prices": {
+        "1": {
+          "price": 85.0,
+          "cost": 9.6,
+          "cost_ratio": 0.112941,
+          "work_value": 0.0
+        },
+        "2": {
+          "price": 95.0,
+          "cost": 13.8,
+          "cost_ratio": 0.145263,
+          "work_value": 0.0
+        },
+        "3": {
+          "price": 110.0,
+          "cost": 20.4,
+          "cost_ratio": 0.185455,
+          "work_value": 0.0
+        }
+      }
+    },
+    "M-04": {
+      "id": "M-04",
+      "name": "代基里",
+      "difficulty": "M",
+      "ingredients": [
+        {
+          "name": "白朗姆",
+          "amount": 50,
+          "unit": "ml"
+        },
+        {
+          "name": "青柠汁",
+          "amount": 25,
+          "unit": "ml"
+        },
+        {
+          "name": "糖浆",
+          "amount": 15,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [],
+      "method": "摇和",
+      "cup": "鸡尾酒杯",
+      "ice": "无冰",
+      "garnish": [
+        "青柠皮"
+      ],
+      "price": 85.0,
+      "previous_price": 78,
+      "prices": {
+        "1": {
+          "price": 85.0,
+          "cost": 8.36,
+          "cost_ratio": 0.098353,
+          "work_value": 0.0
+        },
+        "2": {
+          "price": 95.0,
+          "cost": 11.86,
+          "cost_ratio": 0.124842,
+          "work_value": 0.0
+        },
+        "3": {
+          "price": 105.0,
+          "cost": 17.36,
+          "cost_ratio": 0.165333,
+          "work_value": 0.0
+        }
+      }
+    },
+    "M-05": {
+      "id": "M-05",
+      "name": "曼哈顿",
+      "difficulty": "M",
+      "ingredients": [
+        {
+          "name": "威士忌",
+          "amount": 50,
+          "unit": "ml"
+        },
+        {
+          "name": "甜味美思",
+          "amount": 25,
+          "unit": "ml"
+        },
+        {
+          "name": "苦精",
+          "amount": 2,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [],
+      "method": "搅拌",
+      "cup": "鸡尾酒杯",
+      "ice": "无冰",
+      "garnish": [
+        "樱桃"
+      ],
+      "price": 90.0,
+      "previous_price": 78,
+      "prices": {
+        "1": {
+          "price": 90.0,
+          "cost": 10.47,
+          "cost_ratio": 0.116333,
+          "work_value": 0.0
+        },
+        "2": {
+          "price": 100.0,
+          "cost": 13.97,
+          "cost_ratio": 0.1397,
+          "work_value": 0.0
+        },
+        "3": {
+          "price": 110.0,
+          "cost": 19.47,
+          "cost_ratio": 0.177,
+          "work_value": 0.0
+        }
+      }
+    },
+    "M-06": {
+      "id": "M-06",
+      "name": "玛格丽特",
+      "difficulty": "M",
+      "ingredients": [
+        {
+          "name": "龙舌兰",
+          "amount": 50,
+          "unit": "ml"
+        },
+        {
+          "name": "橙皮利口",
+          "amount": 30,
+          "unit": "ml"
+        },
+        {
+          "name": "青柠汁",
+          "amount": 20,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [],
+      "method": "摇和",
+      "cup": "玛格丽特杯",
+      "ice": "无冰",
+      "garnish": [
+        "盐边",
+        "青柠角"
+      ],
+      "price": 95.0,
+      "previous_price": 78,
+      "prices": {
+        "1": {
+          "price": 95.0,
+          "cost": 13.0,
+          "cost_ratio": 0.136842,
+          "work_value": 3.0
+        },
+        "2": {
+          "price": 105.0,
+          "cost": 16.5,
+          "cost_ratio": 0.157143,
+          "work_value": 3.0
+        },
+        "3": {
+          "price": 115.0,
+          "cost": 22.0,
+          "cost_ratio": 0.191304,
+          "work_value": 3.0
+        }
+      }
+    },
+    "M-07": {
+      "id": "M-07",
+      "name": "边车",
+      "difficulty": "M",
+      "ingredients": [
+        {
+          "name": "干邑",
+          "amount": 50,
+          "unit": "ml"
+        },
+        {
+          "name": "橙皮利口",
+          "amount": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "柠檬汁",
+          "amount": 20,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [],
+      "method": "摇和",
+      "cup": "鸡尾酒杯",
+      "ice": "无冰",
+      "garnish": [
+        "柠檬皮"
+      ],
+      "price": 95.0,
+      "previous_price": 78,
+      "prices": {
+        "1": {
+          "price": 95.0,
+          "cost": 13.1,
+          "cost_ratio": 0.137895,
+          "work_value": 0.0
+        },
+        "2": {
+          "price": 105.0,
+          "cost": 17.1,
+          "cost_ratio": 0.162857,
+          "work_value": 0.0
+        },
+        "3": {
+          "price": 120.0,
+          "cost": 24.1,
+          "cost_ratio": 0.200833,
+          "work_value": 0.0
+        }
+      }
+    },
+    "M-08": {
+      "id": "M-08",
+      "name": "大都会",
+      "difficulty": "M",
+      "ingredients": [
+        {
+          "name": "伏特加",
+          "amount": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "橙皮利口",
+          "amount": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "青柠汁",
+          "amount": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "蔓越莓汁",
+          "amount": 30,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [],
+      "method": "摇和",
+      "cup": "鸡尾酒杯",
+      "ice": "无冰",
+      "garnish": [
+        "橙皮"
+      ],
+      "price": 90.0,
+      "previous_price": 78,
+      "prices": {
+        "1": {
+          "price": 90.0,
+          "cost": 10.1,
+          "cost_ratio": 0.112222,
+          "work_value": 3.0
+        },
+        "2": {
+          "price": 100.0,
+          "cost": 12.9,
+          "cost_ratio": 0.129,
+          "work_value": 3.0
+        },
+        "3": {
+          "price": 105.0,
+          "cost": 16.9,
+          "cost_ratio": 0.160952,
+          "work_value": 3.0
+        }
+      }
+    },
+    "M-09": {
+      "id": "M-09",
+      "name": "莫吉托",
+      "difficulty": "M",
+      "ingredients": [
+        {
+          "name": "白朗姆",
+          "amount": 45,
+          "unit": "ml"
+        },
+        {
+          "name": "青柠汁",
+          "amount": 25,
+          "unit": "ml"
+        },
+        {
+          "name": "糖浆",
+          "amount": 15,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [
+        {
+          "name": "薄荷",
+          "amount": 6,
+          "unit": "叶"
+        }
+      ],
+      "topup": [],
+      "method": "搅拌",
+      "cup": "高球杯",
+      "ice": "碎冰",
+      "garnish": [
+        "薄荷",
+        "青柠角"
+      ],
+      "price": 90.0,
+      "previous_price": 78,
+      "prices": {
+        "1": {
+          "price": 90.0,
+          "cost": 7.81,
+          "cost_ratio": 0.086778,
+          "work_value": 6.0
+        },
+        "2": {
+          "price": 100.0,
+          "cost": 10.96,
+          "cost_ratio": 0.1096,
+          "work_value": 6.0
+        },
+        "3": {
+          "price": 110.0,
+          "cost": 15.91,
+          "cost_ratio": 0.144636,
+          "work_value": 6.0
+        }
+      }
+    },
+    "M-10": {
+      "id": "M-10",
+      "name": "白色俄罗斯",
+      "difficulty": "M",
+      "ingredients": [
+        {
+          "name": "伏特加",
+          "amount": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "咖啡利口",
+          "amount": 20,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [
+        {
+          "name": "淡奶油",
+          "amount": 30,
+          "unit": "ml"
+        }
+      ],
+      "method": "直调",
+      "cup": "古典杯",
+      "ice": "大冰",
+      "garnish": [
+        "咖啡豆"
+      ],
+      "price": 85.0,
+      "previous_price": 78,
+      "prices": {
+        "1": {
+          "price": 85.0,
+          "cost": 9.7,
+          "cost_ratio": 0.114118,
+          "work_value": 0.0
+        },
+        "2": {
+          "price": 95.0,
+          "cost": 12.5,
+          "cost_ratio": 0.131579,
+          "work_value": 0.0
+        },
+        "3": {
+          "price": 100.0,
+          "cost": 16.5,
+          "cost_ratio": 0.165,
+          "work_value": 0.0
+        }
+      }
+    },
+    "M-11": {
+      "id": "M-11",
+      "name": "蜂之膝",
+      "difficulty": "M",
+      "ingredients": [
+        {
+          "name": "金酒",
+          "amount": 50,
+          "unit": "ml"
+        },
+        {
+          "name": "柠檬汁",
+          "amount": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "蜂蜜糖浆",
+          "amount": 20,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [],
+      "method": "摇和",
+      "cup": "鸡尾酒杯",
+      "ice": "无冰",
+      "garnish": [
+        "柠檬皮"
+      ],
+      "price": 85.0,
+      "previous_price": 78,
+      "prices": {
+        "1": {
+          "price": 85.0,
+          "cost": 9.3,
+          "cost_ratio": 0.109412,
+          "work_value": 0.0
+        },
+        "2": {
+          "price": 95.0,
+          "cost": 12.8,
+          "cost_ratio": 0.134737,
+          "work_value": 0.0
+        },
+        "3": {
+          "price": 105.0,
+          "cost": 18.3,
+          "cost_ratio": 0.174286,
+          "work_value": 0.0
+        }
+      }
+    },
+    "M-12": {
+      "id": "M-12",
+      "name": "阿佩罗气泡",
+      "difficulty": "M",
+      "ingredients": [
+        {
+          "name": "阿佩罗",
+          "amount": 60,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [
+        {
+          "name": "苏打水",
+          "amount": 90,
+          "unit": "ml"
+        }
+      ],
+      "method": "直调",
+      "cup": "葡萄酒杯",
+      "ice": "大冰",
+      "garnish": [
+        "橙片"
+      ],
+      "price": 90.0,
+      "previous_price": 78,
+      "prices": {
+        "1": {
+          "price": 90.0,
+          "cost": 11.22,
+          "cost_ratio": 0.124667,
+          "work_value": 0.0
+        },
+        "2": {
+          "price": 90.0,
+          "cost": 11.22,
+          "cost_ratio": 0.124667,
+          "work_value": 0.0
+        },
+        "3": {
+          "price": 90.0,
+          "cost": 11.22,
+          "cost_ratio": 0.124667,
+          "work_value": 0.0
+        }
+      }
+    },
+    "H-01": {
+      "id": "H-01",
+      "name": "长岛冰茶",
+      "difficulty": "H",
+      "ingredients": [
+        {
+          "name": "伏特加",
+          "amount": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "金酒",
+          "amount": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "白朗姆",
+          "amount": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "龙舌兰",
+          "amount": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "橙皮利口",
+          "amount": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "柠檬汁",
+          "amount": 25,
+          "unit": "ml"
+        },
+        {
+          "name": "糖浆",
+          "amount": 10,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [
+        {
+          "name": "可乐",
+          "amount": 30,
+          "unit": "ml"
+        }
+      ],
+      "method": "摇和",
+      "cup": "高球杯",
+      "ice": "大冰",
+      "garnish": [
+        "柠檬角"
+      ],
+      "price": 125.0,
+      "previous_price": 108,
+      "prices": {
+        "1": {
+          "price": 125.0,
+          "cost": 12.22,
+          "cost_ratio": 0.09776,
+          "work_value": 15.0
+        },
+        "2": {
+          "price": 135.0,
+          "cost": 16.42,
+          "cost_ratio": 0.12163,
+          "work_value": 15.0
+        },
+        "3": {
+          "price": 150.0,
+          "cost": 22.87,
+          "cost_ratio": 0.152467,
+          "work_value": 15.0
+        }
+      }
+    },
+    "H-02": {
+      "id": "H-02",
+      "name": "血腥玛丽",
+      "difficulty": "H",
+      "ingredients": [
+        {
+          "name": "伏特加",
+          "amount": 45,
+          "unit": "ml"
+        },
+        {
+          "name": "番茄汁",
+          "amount": 90,
+          "unit": "ml"
+        },
+        {
+          "name": "柠檬汁",
+          "amount": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "伍斯特酱",
+          "amount": 3,
+          "unit": "ml"
+        },
+        {
+          "name": "辣酱",
+          "amount": 2,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [],
+      "method": "滚摇",
+      "cup": "高球杯",
+      "ice": "大冰",
+      "garnish": [
+        "芹菜",
+        "柠檬角"
+      ],
+      "price": 120.0,
+      "previous_price": 108,
+      "prices": {
+        "1": {
+          "price": 120.0,
+          "cost": 9.7,
+          "cost_ratio": 0.080833,
+          "work_value": 14.0
+        },
+        "2": {
+          "price": 130.0,
+          "cost": 12.85,
+          "cost_ratio": 0.098846,
+          "work_value": 14.0
+        },
+        "3": {
+          "price": 140.0,
+          "cost": 17.35,
+          "cost_ratio": 0.123929,
+          "work_value": 14.0
+        }
+      }
+    },
+    "H-03": {
+      "id": "H-03",
+      "name": "迈泰",
+      "difficulty": "H",
+      "ingredients": [
+        {
+          "name": "白朗姆",
+          "amount": 30,
+          "unit": "ml"
+        },
+        {
+          "name": "陈年朗姆",
+          "amount": 30,
+          "unit": "ml"
+        },
+        {
+          "name": "橙皮利口",
+          "amount": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "杏仁利口",
+          "amount": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "青柠汁",
+          "amount": 25,
+          "unit": "ml"
+        },
+        {
+          "name": "糖浆",
+          "amount": 5,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [],
+      "method": "摇和",
+      "cup": "古典杯",
+      "ice": "碎冰",
+      "garnish": [
+        "薄荷",
+        "菠萝叶"
+      ],
+      "price": 130.0,
+      "previous_price": 108,
+      "prices": {
+        "1": {
+          "price": 130.0,
+          "cost": 15.22,
+          "cost_ratio": 0.117077,
+          "work_value": 12.0
+        },
+        "2": {
+          "price": 140.0,
+          "cost": 19.42,
+          "cost_ratio": 0.138714,
+          "work_value": 12.0
+        },
+        "3": {
+          "price": 155.0,
+          "cost": 26.02,
+          "cost_ratio": 0.167871,
+          "work_value": 12.0
+        }
+      }
+    },
+    "H-04": {
+      "id": "H-04",
+      "name": "僵尸",
+      "difficulty": "H",
+      "ingredients": [
+        {
+          "name": "白朗姆",
+          "amount": 30,
+          "unit": "ml"
+        },
+        {
+          "name": "陈年朗姆",
+          "amount": 30,
+          "unit": "ml"
+        },
+        {
+          "name": "高酯朗姆",
+          "amount": 30,
+          "unit": "ml"
+        },
+        {
+          "name": "青柠汁",
+          "amount": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "红石榴糖浆",
+          "amount": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "苦精",
+          "amount": 1,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [],
+      "method": "摇和",
+      "cup": "高球杯",
+      "ice": "碎冰",
+      "garnish": [
+        "薄荷"
+      ],
+      "price": 140.0,
+      "previous_price": 108,
+      "prices": {
+        "1": {
+          "price": 140.0,
+          "cost": 20.66,
+          "cost_ratio": 0.147571,
+          "work_value": 9.0
+        },
+        "2": {
+          "price": 155.0,
+          "cost": 26.96,
+          "cost_ratio": 0.173935,
+          "work_value": 9.0
+        },
+        "3": {
+          "price": 175.0,
+          "cost": 36.86,
+          "cost_ratio": 0.210629,
+          "work_value": 9.0
+        }
+      }
+    },
+    "H-05": {
+      "id": "H-05",
+      "name": "拉莫斯金菲士",
+      "difficulty": "H",
+      "ingredients": [
+        {
+          "name": "金酒",
+          "amount": 45,
+          "unit": "ml"
+        },
+        {
+          "name": "柠檬汁",
+          "amount": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "青柠汁",
+          "amount": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "糖浆",
+          "amount": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "淡奶油",
+          "amount": 30,
+          "unit": "ml"
+        },
+        {
+          "name": "蛋白",
+          "amount": 15,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [
+        {
+          "name": "苏打水",
+          "amount": 30,
+          "unit": "ml"
+        }
+      ],
+      "method": "长摇",
+      "cup": "高球杯",
+      "ice": "无冰",
+      "garnish": [],
+      "price": 125.0,
+      "previous_price": 108,
+      "prices": {
+        "1": {
+          "price": 125.0,
+          "cost": 11.22,
+          "cost_ratio": 0.08976,
+          "work_value": 17.0
+        },
+        "2": {
+          "price": 135.0,
+          "cost": 14.37,
+          "cost_ratio": 0.106444,
+          "work_value": 17.0
+        },
+        "3": {
+          "price": 145.0,
+          "cost": 19.32,
+          "cost_ratio": 0.133241,
+          "work_value": 17.0
+        }
+      }
+    },
+    "H-06": {
+      "id": "H-06",
+      "name": "查特瑞",
+      "difficulty": "H",
+      "ingredients": [
+        {
+          "name": "威士忌",
+          "amount": 30,
+          "unit": "ml"
+        },
+        {
+          "name": "干邑",
+          "amount": 30,
+          "unit": "ml"
+        },
+        {
+          "name": "甜味美思",
+          "amount": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "草本利口",
+          "amount": 5,
+          "unit": "ml"
+        },
+        {
+          "name": "苦精",
+          "amount": 2,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [],
+      "method": "搅拌",
+      "cup": "古典杯",
+      "ice": "大冰",
+      "garnish": [
+        "柠檬皮"
+      ],
+      "price": 120.0,
+      "previous_price": 108,
+      "prices": {
+        "1": {
+          "price": 120.0,
+          "cost": 13.62,
+          "cost_ratio": 0.1135,
+          "work_value": 6.0
+        },
+        "2": {
+          "price": 130.0,
+          "cost": 18.12,
+          "cost_ratio": 0.139385,
+          "work_value": 6.0
+        },
+        "3": {
+          "price": 145.0,
+          "cost": 25.62,
+          "cost_ratio": 0.17669,
+          "work_value": 6.0
+        }
+      }
+    },
+    "H-07": {
+      "id": "H-07",
+      "name": "最后的话",
+      "difficulty": "H",
+      "ingredients": [
+        {
+          "name": "金酒",
+          "amount": 30,
+          "unit": "ml"
+        },
+        {
+          "name": "樱桃利口",
+          "amount": 30,
+          "unit": "ml"
+        },
+        {
+          "name": "草本利口",
+          "amount": 30,
+          "unit": "ml"
+        },
+        {
+          "name": "青柠汁",
+          "amount": 30,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [],
+      "method": "摇和",
+      "cup": "鸡尾酒杯",
+      "ice": "无冰",
+      "garnish": [
+        "樱桃"
+      ],
+      "price": 130.0,
+      "previous_price": 108,
+      "prices": {
+        "1": {
+          "price": 130.0,
+          "cost": 18.9,
+          "cost_ratio": 0.145385,
+          "work_value": 3.0
+        },
+        "2": {
+          "price": 135.0,
+          "cost": 21.0,
+          "cost_ratio": 0.155556,
+          "work_value": 3.0
+        },
+        "3": {
+          "price": 145.0,
+          "cost": 24.3,
+          "cost_ratio": 0.167586,
+          "work_value": 3.0
+        }
+      }
+    },
+    "H-08": {
+      "id": "H-08",
+      "name": "新加坡司令",
+      "difficulty": "H",
+      "ingredients": [
+        {
+          "name": "金酒",
+          "amount": 30,
+          "unit": "ml"
+        },
+        {
+          "name": "樱桃利口",
+          "amount": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "橙汁",
+          "amount": 30,
+          "unit": "ml"
+        },
+        {
+          "name": "菠萝汁",
+          "amount": 30,
+          "unit": "ml"
+        },
+        {
+          "name": "柠檬汁",
+          "amount": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "红石榴糖浆",
+          "amount": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "苦精",
+          "amount": 1,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [
+        {
+          "name": "苏打水",
+          "amount": 30,
+          "unit": "ml"
+        }
+      ],
+      "method": "摇和",
+      "cup": "高球杯",
+      "ice": "大冰",
+      "garnish": [
+        "菠萝片",
+        "樱桃"
+      ],
+      "price": 130.0,
+      "previous_price": 108,
+      "prices": {
+        "1": {
+          "price": 130.0,
+          "cost": 11.5,
+          "cost_ratio": 0.088462,
+          "work_value": 18.0
+        },
+        "2": {
+          "price": 135.0,
+          "cost": 13.6,
+          "cost_ratio": 0.100741,
+          "work_value": 18.0
+        },
+        "3": {
+          "price": 145.0,
+          "cost": 16.9,
+          "cost_ratio": 0.116552,
+          "work_value": 18.0
+        }
+      }
+    },
+    "H-09": {
+      "id": "H-09",
+      "name": "血与沙",
+      "difficulty": "H",
+      "ingredients": [
+        {
+          "name": "威士忌",
+          "amount": 30,
+          "unit": "ml"
+        },
+        {
+          "name": "樱桃利口",
+          "amount": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "甜味美思",
+          "amount": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "橙汁",
+          "amount": 30,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [],
+      "method": "摇和",
+      "cup": "鸡尾酒杯",
+      "ice": "无冰",
+      "garnish": [
+        "橙皮"
+      ],
+      "price": 115.0,
+      "previous_price": 108,
+      "prices": {
+        "1": {
+          "price": 115.0,
+          "cost": 11.4,
+          "cost_ratio": 0.09913,
+          "work_value": 3.0
+        },
+        "2": {
+          "price": 120.0,
+          "cost": 13.5,
+          "cost_ratio": 0.1125,
+          "work_value": 3.0
+        },
+        "3": {
+          "price": 130.0,
+          "cost": 16.8,
+          "cost_ratio": 0.129231,
+          "work_value": 3.0
+        }
+      }
+    },
+    "H-10": {
+      "id": "H-10",
+      "name": "三叶草俱乐部",
+      "difficulty": "H",
+      "ingredients": [
+        {
+          "name": "金酒",
+          "amount": 45,
+          "unit": "ml"
+        },
+        {
+          "name": "柠檬汁",
+          "amount": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "糖浆",
+          "amount": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "覆盆子糖浆",
+          "amount": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "蛋白",
+          "amount": 20,
+          "unit": "ml"
+        }
+      ],
+      "pre_solids": [],
+      "topup": [],
+      "method": "摇和",
+      "cup": "鸡尾酒杯",
+      "ice": "无冰",
+      "garnish": [
+        "覆盆子"
+      ],
+      "price": 110.0,
+      "previous_price": 108,
+      "prices": {
+        "1": {
+          "price": 110.0,
+          "cost": 9.26,
+          "cost_ratio": 0.084182,
+          "work_value": 6.0
+        },
+        "2": {
+          "price": 120.0,
+          "cost": 12.41,
+          "cost_ratio": 0.103417,
+          "work_value": 6.0
+        },
+        "3": {
+          "price": 130.0,
+          "cost": 17.36,
+          "cost_ratio": 0.133538,
+          "work_value": 6.0
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "save_path":"user://rival11_test.json", "seed":20261118,
+  "dates":[3,5,6,10,13], "base_customers":6,
+  "simple":"S-01", "cheap":"S-05", "hard":"H-04", "classic":"M-01", "crushed":"M-09",
+  "regular":"registered-test-regular", "cream":"淡奶油", "lime":"青柠汁",
+  "expected":{"guard_price":70,"match_price":60,"guard_customers":5,"match_customers":6,"guard_three":210,"match_three":180,"hard_price":140,"copy_price":126,"copy_difference":42,"classic_copy_price":81,"cream_regular":35,"cream_emergency":42,"substitute_simple":53,"substitute_hard":140,"viola_low":112,"viola_upgraded":155,"lock_fee":8,"lock_basket_base":711,"lock_basket_market":754,"lock_basket_total":719,"lock_basket_saving":35},
+  "basket_recipes":["S-01","M-02","H-04"], "cash":2000,
+  "rising_variation":0.06, "outage_start":10, "outage_expiry":12
+}

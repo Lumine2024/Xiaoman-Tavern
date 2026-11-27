@@ -1,0 +1,21 @@
+{
+  "save_path": "user://test_street_rival.json",
+  "simple": "S-05",
+  "medium": "M-01",
+  "hard": "H-01",
+  "windows": [
+    [
+      1280,
+      800
+    ],
+    [
+      1440,
+      900
+    ]
+  ],
+  "bad_respect": 4,
+  "late_change_day": 7,
+  "copy_day": 5,
+  "observe_end": 3,
+  "max_day": 14
+}

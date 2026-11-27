@@ -1,0 +1,78 @@
+{
+  "version": "0.4-pilot",
+  "numbers": {
+    "rumor_day": 3,
+    "pressure_day": 4,
+    "visit_day": 6,
+    "change_day": 6,
+    "escalation_day": 10,
+    "ending_day": 14,
+    "observe_days": 3,
+    "copy_delay": 2,
+    "max_copies": 2,
+    "copy_hit_loss": 1,
+    "traffic_cap": 2,
+    "price_traffic": -1,
+    "change_traffic": -2,
+    "reply_traffic": -1,
+    "respect_cap": 3,
+    "alliance_choices": 5,
+    "alliance_respect": 2,
+    "hold_days": 3,
+    "offset_slots": 2,
+    "offset_hit": 1,
+    "immune_tier": 3,
+    "irony_advance": 1,
+    "escalation_traffic": -1,
+    "visit_traffic": -1
+  },
+  "immune_method": "长摇",
+  "cards": {
+    "follow": {
+      "enabled": true,
+      "traffic": 1,
+      "margin_loss": 0.15,
+      "reputation": 0
+    },
+    "defend": {
+      "enabled": false
+    },
+    "offset": {
+      "enabled": true,
+      "traffic": 0,
+      "margin_loss": 0,
+      "reputation": 0
+    },
+    "stock": {
+      "enabled": false
+    },
+    "attract": {
+      "enabled": true,
+      "traffic": 1,
+      "margin_loss": 0,
+      "reputation": -1
+    }
+  },
+  "responses": {
+    "reply": {
+      "respect": 1,
+      "reputation": 0
+    },
+    "silent": {
+      "respect": 0,
+      "reputation": 0
+    },
+    "irony": {
+      "respect": -1,
+      "reputation": 1
+    }
+  },
+  "captain": {
+    "id": "船长"
+  },
+  "price_recipe_ids": [
+    "S-05",
+    "S-02",
+    "S-03"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "save_path": "user://test_sfx_delivery.json",
+  "recipe": "S-01",
+  "rival": "karn",
+  "silent_ice": "无冰",
+  "audible_ice": "大冰",
+  "ice_cue": "sfx.ice",
+  "straight_cue": "sfx.mix_straight",
+  "shake_seconds": 0.35,
+  "start_wait": 0.08,
+  "finish_wait": 0.5,
+  "stock_ml": 6000
+}
